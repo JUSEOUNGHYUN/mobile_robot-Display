@@ -84,7 +84,7 @@ def main():
         logging.debug("[시스템] 환경 변수 설정 중...")
         # 아래 환경 변수를 주석 처리하여 커스텀 키보드를 사용하도록 설정
         # os.environ["QT_QPA_PLATFORM"] = "xcb"
-        os.environ["DISPLAY"] = ":3"  # 필요에 따라 변경
+        os.environ["DISPLAY"] = ":0"  # 필요에 따라 변경
         os.environ["XDG_RUNTIME_DIR"] = "/run/user/1000"
         os.environ["XAUTHORITY"] = os.path.expanduser("~/.Xauthority")
 
