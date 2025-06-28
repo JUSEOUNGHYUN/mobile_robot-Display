@@ -76,16 +76,23 @@ class LocationAddView(QWidget):
         """초기화"""
         super().__init__(parent)
         
-        # 금지 구역 발행자 초기화
-        self.keepout_zone_publisher = KeepoutZonePublisher()
-        self.delete_keepout_zone_publisher = DeleteKeepoutZonePublisher()
-        
-        # 우선 경로 영역 발행자 초기화
-        self.preferred_area_publisher = PreferredAreaPublisher()
+        try:
+            # 금지 구역 발행자 초기화
+            self.keepout_zone_publisher = KeepoutZonePublisher()
+            self.delete_keepout_zone_publisher = DeleteKeepoutZonePublisher()
+            
+            # 우선 경로 영역 발행자 초기화
+            self.preferred_area_publisher = PreferredAreaPublisher()
+        except Exception as e:
+            print(f"ROS 발행자 초기화 중 오류: {e}")
         
         self.style_button_size = 80  # 버튼 크기 (픽셀 단위)
         self.button_opacity = 180  # 아이콘 크기 (픽셀 단위)
 
+        # 호출벨 관련 변수 추가
+        self.last_detected_callbell_id = None
+        self.is_callbell_active = False
+        
         # 기본 변수 초기화
         self.ui = None
         self.map_scene = None
@@ -97,8 +104,12 @@ class LocationAddView(QWidget):
         self.cancel_button = None
         self.name_input = None
         self.destination_name_input = None
-        self.callbell_button = None
         self.map_data_debug_TextEdit = None
+        
+        # 호출벨 버튼 변수 추가
+        self.not_called_button = None
+        self.callbell_activated_button = None
+        self.updating_call_button = None
         
         # 드래그 관련 변수 추가
         self.is_dragging = False
@@ -126,16 +137,8 @@ class LocationAddView(QWidget):
         # 위치 데이터 로딩 상태 플래그
         self.loading_location = False
 
-        # 링고벨 관련 변수
-        self.ringo_uuid = None
-        self.robot_yaw = 0.0  # 로봇 방향
-        
-        # 링고벨 다중 호출 관리를 위한 변수들
-        self.ringo_bells = []  # 호출된 벨 목록을 저장
-        self.current_bell_index = 0  # 현재 표시 중인 벨 인덱스
-        
-        # 호출벨 선택 메뉴 설정
-        self.setup_bell_menu()
+        # 로봇 방향
+        self.robot_yaw = 0.0
 
         # 영역 설정 관련 변수 초기화
         self.is_area_drawing_mode = False
@@ -311,8 +314,14 @@ class LocationAddView(QWidget):
         self.register_button = self.ui.findChild(QPushButton, "register_button")
         self.cancel_button = self.ui.findChild(QPushButton, "cancel_button")
         self.destination_name_input = self.ui.findChild(QLineEdit, "destination_name_input")
-        self.callbell_button = self.ui.findChild(QPushButton, "callbell_button")
-        self.callbell_button.setEnabled(False)  # 초기에는 비활성화
+        
+        # 호출벨 버튼 초기화
+        self.not_called_button = self.ui.findChild(QPushButton, "not_called_button")
+        self.callbell_activated_button = self.ui.findChild(QPushButton, "callbell_activated_button")
+        self.updating_call_button = self.ui.findChild(QPushButton, "updating_call_button")
+        self.not_called_button.setVisible(True)
+        self.callbell_activated_button.setVisible(False)
+        self.updating_call_button.setVisible(False)
         
         # 목적지 등록 스타일 적용
         RoundButtonStyle.apply_icon_button_style(
@@ -520,12 +529,6 @@ class LocationAddView(QWidget):
         self.three_point_line_circles = []
         self.three_point_line_lines = []
 
-        # 초기 상태 설정
-        self.callbell_button.setEnabled(False)
-        if self.map_data_debug_TextEdit:
-            self.map_data_debug_TextEdit.setVisible(True)
-            self.map_data_debug_TextEdit.setEnabled(True)
-            
         # 초기 위젯 표시 상태 설정
         self.status_widget.setVisible(True)
         self.area_list_container.setVisible(False)
@@ -585,7 +588,7 @@ class LocationAddView(QWidget):
         
         # 맵 변환 정보 확인
         self.check_map_transform()
-        
+
         self.map_manager.position_clicked.connect(self.on_position_clicked)
 
         # 마우스 이벤트 필터 설정
@@ -739,6 +742,18 @@ class LocationAddView(QWidget):
         """forbidden_areas.json에서 금지구역을 불러와서 그래픽뷰에 그림"""
         print("\n===== load_forbidden_areas 함수 시작 =====")
         
+        # map_manager가 None인지 확인
+        if not hasattr(self, 'map_manager') or self.map_manager is None:
+            print("map_manager가 초기화되지 않았습니다.")
+            print("===== load_forbidden_areas 함수 종료 =====\n")
+            return
+            
+        # map_scene이 None인지 확인
+        if not hasattr(self.map_manager, 'map_scene') or self.map_manager.map_scene is None:
+            print("map_scene이 초기화되지 않았습니다.")
+            print("===== load_forbidden_areas 함수 종료 =====\n")
+            return
+            
         # 현재 씬 크기 저장 및 고정
         self.map_manager.map_scene.setSceneRect(0, 0, 552, 491)
         print(f"[MapManager] 씬 크기 고정: 552 x 491 픽셀")
@@ -1002,6 +1017,11 @@ class LocationAddView(QWidget):
     def check_map_transform(self):
         """맵 변환 정보 확인"""
         try:
+            # map_manager가 초기화되었는지 확인
+            if not hasattr(self, 'map_manager') or self.map_manager is None:
+                print("map_manager가 초기화되지 않아 맵 변환 정보를 확인할 수 없습니다.")
+                return False
+                
             # 맵 변환 정보 파일 경로
             transform_file = os.path.join(os.path.dirname(os.path.dirname(__file__)), 
                                         "data", "map_transform.json")
@@ -1017,7 +1037,8 @@ class LocationAddView(QWidget):
                 
                 if result == MessageBox.OK:
                     # 맵 이미지 컨트롤 화면으로 이동
-                    self.map_image_control_signal.emit()
+                    if hasattr(self, 'map_image_control_signal'):
+                        self.map_image_control_signal.emit()
                     return False
                 else:
                     # 취소한 경우 이전 화면으로 돌아가기
@@ -1082,8 +1103,6 @@ class LocationAddView(QWidget):
         # 모두 삭제 버튼 연결
         # if hasattr(self, 'delete_all_button'):
         #     self.delete_all_button.clicked.connect(self.on_area_delete_button_clicked)
-    
-        self.callbell_button.clicked.connect(self.on_callbell_button_clicked)
         
         # 맵 컨트롤 버튼 연결
         self.map_zoom_in.clicked.connect(self.on_map_zoom_in)
@@ -1234,6 +1253,11 @@ class LocationAddView(QWidget):
         사용자가 명시적으로 클릭한 경우에만 마커를 표시합니다.
         """
         try:
+            # map_manager가 초기화되지 않았으면 무시
+            if not hasattr(self, 'map_manager') or self.map_manager is None:
+                print("맵 매니저가 초기화되지 않아 로봇 마커를 업데이트할 수 없습니다.")
+                return
+                
             # 클릭 위치가 없거나 사용자가 명시적으로 클릭하지 않은 경우 마커를 표시하지 않음
             if self.clicked_x is None or self.clicked_y is None or not self.user_has_clicked:
                 print("마커 업데이트 실패: 위치 정보 없거나 사용자가 아직 클릭하지 않음")
@@ -1792,11 +1816,13 @@ class LocationAddView(QWidget):
 
     def cleanup_resources(self):
         """리소스 정리 함수"""
+        import gc
+        
         # 버튼 정리
         if hasattr(self, 'area_buttons') and self.area_buttons:
             for button in self.area_buttons[:]:  # 복사본으로 반복
                 try:
-                    if button.scene():
+                    if hasattr(button, 'scene') and button.scene():
                         button.scene().removeItem(button)
                     if hasattr(self, 'area_list_layout') and button in self.area_list_layout.children():
                         self.area_list_layout.removeWidget(button)
@@ -1805,6 +1831,18 @@ class LocationAddView(QWidget):
                 except Exception as e:
                     print(f"버튼 정리 중 오류: {e}")
             self.area_buttons.clear()
+        
+        # 타이머 정리
+        for attr_name in dir(self):
+            if attr_name.endswith('_timer') and hasattr(self, attr_name):
+                timer = getattr(self, attr_name)
+                try:
+                    if hasattr(timer, 'stop'):
+                        timer.stop()
+                    if hasattr(timer, 'deleteLater'):
+                        timer.deleteLater()
+                except Exception as e:
+                    print(f"{attr_name} 정리 중 오류: {e}")
         
         # 맵 매니저 정리
         if hasattr(self, 'map_manager') and self.map_manager:
@@ -1825,6 +1863,7 @@ class LocationAddView(QWidget):
         if hasattr(self, 'keepout_zone_publisher'):
             try:
                 self.keepout_zone_publisher.cleanup()
+                self.keepout_zone_publisher = None
             except Exception as e:
                 print(f"금지 구역 발행자 정리 중 오류: {e}")
                 
@@ -1832,6 +1871,7 @@ class LocationAddView(QWidget):
         if hasattr(self, 'delete_keepout_zone_publisher'):
             try:
                 self.delete_keepout_zone_publisher.cleanup()
+                self.delete_keepout_zone_publisher = None
             except Exception as e:
                 print(f"금지 구역 삭제 발행자 정리 중 오류: {e}")
                 
@@ -1839,6 +1879,7 @@ class LocationAddView(QWidget):
         if hasattr(self, 'preferred_area_publisher'):
             try:
                 self.preferred_area_publisher.cleanup()
+                self.preferred_area_publisher = None
             except Exception as e:
                 print(f"우선 경로 영역 발행자 정리 중 오류: {e}")
         
@@ -1847,13 +1888,16 @@ class LocationAddView(QWidget):
             self.disconnect()
         except Exception as e:
             print(f"시그널 연결 해제 중 오류: {e}")
+            
+        # 가비지 컬렉션 강제 실행
+        gc.collect()
         
         print("LocationAddView 리소스 정리 완료")
 
     def on_save(self):
         """저장 버튼 클릭"""
-        if self.ringo_uuid:
-            print(f"저장할 UUID: {self.ringo_uuid}")
+        if hasattr(self, 'last_detected_callbell_id') and self.last_detected_callbell_id:
+            print(f"저장할 UUID: {self.last_detected_callbell_id}")
             self.save_signal.emit()
         else:
             self.save_signal.emit()
@@ -1862,24 +1906,61 @@ class LocationAddView(QWidget):
         """취소 버튼 클릭 (뒤로가기 기능 포함)"""
         self.cancel_signal.emit()
 
-    def on_callbell_button_clicked(self):
-        """호출벨 버튼 클릭 이벤트 처리"""
-        # 호출벨 매니저에서 UUID 요청 명령 전송
-        try:
-            from models.RingoBellManager import RingoBellManager
-            bell_manager = RingoBellManager.instance()
-            if bell_manager:
-                print("호출벨 버튼 클릭: UUID 요청 명령 전송")
-                bell_manager.request_uuid()
-        except Exception as e:
-            print(f"호출벨 매니저 접근 오류: {e}")
+    def on_callbell_detected(self, callbell_id):
+        """호출벨이 감지되었을 때 호출되는 메서드
+        
+        Args:
+            callbell_id (str): 감지된 호출벨의 고유 ID (MAC 주소 등)
+        """
+        # 이전에 감지된 호출벨과 동일한 경우 무시
+        if self.is_callbell_active and callbell_id == self.last_detected_callbell_id:
+            print(f"동일한 호출벨 감지됨 (무시): {callbell_id}")
+            return
             
-        # 호출벨이 여러 개 있을 경우 다음 호출벨로 전환
-        if len(self.ringo_bells) > 1:
-            self.cycle_next_bell()
+        # 새로운 호출벨이 감지된 경우
+        if self.is_callbell_active and callbell_id != self.last_detected_callbell_id:
+            print(f"새로운 호출벨 감지됨: {callbell_id}")
+            # 모든 호출벨 버튼 숨기기
+            self.not_called_button.setVisible(False)
+            self.callbell_activated_button.setVisible(False)
             
-            # 선택한 호출벨 정보 표시
-            print(f"전환된 호출벨: {self.ringo_uuid}")
+            # updating_call_button 활성화
+            self.updating_call_button.setVisible(True)
+            
+            # 500ms 후에 다시 callbell_activated_button으로 전환
+            QTimer.singleShot(500, lambda: self.activate_callbell(callbell_id))
+        else:
+            # 처음 호출벨이 감지된 경우
+            print(f"첫 호출벨 감지됨: {callbell_id}")
+            self.activate_callbell(callbell_id)
+    
+    def activate_callbell(self, callbell_id):
+        """호출벨을 활성화 상태로 변경
+        
+        Args:
+            callbell_id (str): 활성화할 호출벨의 고유 ID
+        """
+        self.last_detected_callbell_id = callbell_id
+        self.is_callbell_active = True
+        
+        # 모든 버튼 숨기기
+        self.not_called_button.setVisible(False)
+        self.updating_call_button.setVisible(False)
+        
+        # 활성화 버튼만 표시
+        self.callbell_activated_button.setVisible(True)
+    
+    def reset_callbell(self):
+        """호출벨 상태를 초기화"""
+        self.last_detected_callbell_id = None
+        self.is_callbell_active = False
+        
+        # 모든 버튼 숨기기
+        self.callbell_activated_button.setVisible(False)
+        self.updating_call_button.setVisible(False)
+        
+        # 기본 버튼만 표시
+        self.not_called_button.setVisible(True)
 
     def set_robot_position(self, x, y, yaw):
         """
@@ -1900,7 +1981,7 @@ class LocationAddView(QWidget):
         """현재 입력된 위치 데이터 반환 (좌표 및 회전값 포함)"""
         data = {
             'name': self.destination_name_input.text().strip(),
-            'ringo_uuid': self.ringo_uuid,
+            'callbell_id': self.last_detected_callbell_id,
             'clicked_x': getattr(self, 'clicked_x', None),
             'clicked_y': getattr(self, 'clicked_y', None),
             'clicked_theta': self.robot_yaw,  # 로봇 방향 저장
@@ -1909,7 +1990,7 @@ class LocationAddView(QWidget):
             'robot_theta': getattr(self, 'robot_yaw', None)
         }
         print(f"LocationAddView - 전달할 데이터: {data}")
-        print(f"LocationAddView - 현재 ringo_uuid: {self.ringo_uuid}")
+        print(f"LocationAddView - 현재 호출벨 ID: {self.last_detected_callbell_id}")
         return data
 
     def set_location_data(self, data):
@@ -1921,27 +2002,15 @@ class LocationAddView(QWidget):
             
             self.destination_name_input.setText(data.get('name', ''))
 
-            # UUID 설정 (링고벨 호출 상태가 있으면 호출됨으로 표시)            
+                        # 호출벨 ID 설정 (호출 상태가 있으면 호출됨으로 표시)            
             if 'unique_id' in data and data['unique_id']:
-                self.ringo_uuid = data['unique_id']
-                # 호출벨 정보 생성 및 저장
-                bell_info = {
-                    'uuid': self.ringo_uuid,
-                    'time': QTime.currentTime().toString('hh:mm:ss'),
-                    'color': QColor("#2cbb5d"),  # 기본 녹색
-                    'active': True
-                }
-                # 벨 정보 저장 및 활성화
-                self.ringo_bells = [bell_info]
-                self.current_bell_index = 0
+                callbell_id = data['unique_id']
                 
-                # 호출벨 버튼 활성화 및 UI 업데이트
-                self.callbell_button.setEnabled(True)
-                self.callbell_button.setText("호출벨\n감지됨")
-                self.update_callbell_ui()
+                # 호출벨 활성화
+                self.on_callbell_detected(callbell_id)
                 
-                # 호출벨 상태 UI 업데이트
-                print(f"호출벨 UUID 설정: {self.ringo_uuid}, 호출 버튼 활성화됨")
+                # 호출벨 상태 로그 출력
+                print(f"호출벨 ID 설정: {callbell_id}, 호출벨 활성화됨")
 
             # 로봇 위치/방향 설정 (있으면)
             position = data.get('position', {})
@@ -1979,11 +2048,9 @@ class LocationAddView(QWidget):
         #     self.register_button.setText("등록")
 
     def reset_view(self):
-        """뷰 초기화"""
+        """뷰를 초기화합니다."""
+        # 기본 UI 초기화
         self.destination_name_input.clear()
-        self.ringo_bells.clear()
-        self.ringo_uuid = None
-        self.current_bell_index = 0
         
         # 위치 값 초기화
         self.clicked_x = None
@@ -1997,40 +2064,35 @@ class LocationAddView(QWidget):
         if hasattr(self, 'map_data_debug_TextEdit') and self.map_data_debug_TextEdit:
             self.update_debug_text(0.0, 0.0, 0.0)
         
-        # 호출벨 버튼 초기화
-        self.callbell_button.setText("Not\nCalled")
-        RoundButtonStyle.apply_icon_button_style(
-            button=self.callbell_button,
-            width=150,
-            height=80,
-            icon_path=":/file/CallBell/bell_off.png",
-            icon_size=60,
-            border_radius=3
-        )
-        self.callbell_button.setEnabled(False)
+        # 호출벨 상태 초기화
+        self.reset_callbell()
+        
+        # 맵 초기화
+        if hasattr(self, 'map_scene') and self.map_scene is not None:
+            self.map_scene.clear()
+        elif hasattr(self, 'map_manager') and self.map_manager and hasattr(self.map_manager, 'map_scene') and self.map_manager.map_scene is not None:
+            self.map_manager.map_scene.clear()
+            
+        # 영역 설정 초기화
+        self.clear_current_rect()
+        self.clear_current_circle()
+        self.clear_current_line()
+        
+        # 로봇 마커 초기화
+        self.update_robot_marker()
+        
+        # 맵 매니저가 초기화되었는지 확인
+        if hasattr(self, 'map_manager') and self.map_manager is not None:
+            # 금지 영역 로드
+            self.load_forbidden_areas()
+            
+            # 맵 변환 확인
+            self.check_map_transform()
 
     def set_unique_id(self, uuid_value):
         """UUID가 추출되었을 때 호출되는 메서드"""
         print(f"LocationAddView - set_unique_id 호출됨: {uuid_value}")
         
-        # 현재 선택된 호출벨과 동일해도 UI 상태 변화 처리
-        if self.ringo_uuid == uuid_value:
-            print(f"현재 선택된 호출벨 재호출: {uuid_value}")
-            # 잠시 bell_off.png로 변경
-            self.callbell_button.setText("Not\nCalled")
-            RoundButtonStyle.apply_icon_button_style(
-                button=self.callbell_button,
-                width=150,
-                height=80,
-                icon_path=":/file/CallBell/bell_off.png",
-                icon_size=60,
-                border_radius=3
-            )
-            
-            # 0.5초 후에 bell_on_red.png로 변경
-            QTimer.singleShot(500, self.update_callbell_ui)
-
-        # 호출벨이 이미 등록되어 있는지 확인
         try:
             import sys
             # RingoBellManager 간접 참조로 확인
@@ -2075,8 +2137,8 @@ class LocationAddView(QWidget):
                                 except Exception as e:
                                     print(f"캐시 갱신 중 오류: {e}")
                                 
-                                # UUID를 기존 목록에서 제거하고 새로 추가
-                                self._add_new_bell(uuid_value)
+                                # 호출벨 감지 메서드 호출
+                                self.on_callbell_detected(uuid_value)
                                 return
                         else:
                             # 취소 버튼을 눌렀을 경우 아무 일도 하지 않음
@@ -2085,111 +2147,12 @@ class LocationAddView(QWidget):
         except Exception as e:
             print(f"호출벨 확인 중 오류: {e}")
 
-        # 이미 목록에 있는 경우, 해당 호출벨을 현재 선택된 호출벨로 변경
-        for i, bell in enumerate(self.ringo_bells):
-            if bell['uuid'] == uuid_value:
-                print(f"이미 등록된 호출벨을 현재 호출벨로 변경: {uuid_value}")
-                
-                # 잠시 bell_off.png로 변경
-                self.callbell_button.setText("Not\nCalled")
-                RoundButtonStyle.apply_icon_button_style(
-                    button=self.callbell_button,
-                    width=150,
-                    height=80,
-                    icon_path=":/file/CallBell/bell_off.png",
-                    icon_size=60,
-                    border_radius=3
-                )
-                
-                # 인덱스 변경
-                self.current_bell_index = i
-                self.ringo_uuid = uuid_value
-                
-                # 0.5초 후에 bell_on_red.png로 변경
-                QTimer.singleShot(500, self.update_callbell_ui)
-                return
-        
-        # 새로운 호출벨이면 추가 (기존 호출벨이 있는 경우 잠시 off 상태로 변경했다가 다시 on)
-        if self.ringo_bells:
-            # 잠시 bell_off.png로 변경
-            self.callbell_button.setText("Not\nCalled")
-            RoundButtonStyle.apply_icon_button_style(
-                button=self.callbell_button,
-                width=150,
-                height=80,
-                icon_path=":/file/CallBell/bell_off.png",
-                icon_size=60,
-                border_radius=3
-            )
-            
-            # 0.5초 후에 새 호출벨 추가 및 bell_on_red.png로 변경
-            QTimer.singleShot(500, lambda: self._add_new_bell(uuid_value))
-        else:
-            # 호출벨이 없는 경우 바로 추가
-            self._add_new_bell(uuid_value)
+        # 호출벨 감지 메서드 호출
+        self.on_callbell_detected(uuid_value)
     
-    def _add_new_bell(self, uuid_value):
-        """새 호출벨 추가 (내부 메서드)"""
-        # 새 호출벨 정보 저장 전에 기존 호출벨 모두 비활성화
-        if self.ringo_bells:
-            for bell in self.ringo_bells:
-                bell['active'] = False
+    # 호출벨 추가 메서드는 새로운 호출벨 감지 로직으로 대체되었습니다.
 
-        # 새 호출벨 정보 저장
-        bell_info = {
-            'uuid': uuid_value,
-            'time': QTime.currentTime().toString('hh:mm:ss'),
-            'color': self.get_random_color(),
-            'active': True
-        }
-        
-        
-        # 새 호출벨을 목록에 추가하고 즉시 선택
-        self.ringo_bells.append(bell_info)
-        self.current_bell_index = len(self.ringo_bells) - 1  # 가장 최근 추가된 벨 선택
-        self.ringo_uuid = uuid_value  # 현재 활성 UUID 설정
-        
-        # 호출벨이 활성 상태임을 표시
-        self.callbell_button.setEnabled(True)
-        
-        # 호출벨 UI 업데이트
-        self.update_callbell_ui()
-
-    def update_callbell_ui(self):
-        """호출벨 버튼 UI 업데이트"""
-        if not self.ringo_bells:
-            # 호출벨이 없는 경우 기본 상태로 표시
-            self.callbell_button.setText("Not\nCalled")
-            # apply_icon_button_style 함수 사용
-            RoundButtonStyle.apply_icon_button_style(
-                button=self.callbell_button,
-                width=150,
-                height=80,
-                icon_path=":/file/CallBell/bell_off.png",
-                icon_size=60,
-                border_radius=3
-            )
-            return
-            
-        # 호출벨이 있는 경우 현재 선택된 호출벨 표시
-        current_bell = self.ringo_bells[self.current_bell_index]
-        
-        # 호출벨 버튼 텍스트 변경 - 호출벨 번호 표시 제거
-        self.callbell_button.setText("CallBell\nActivated")
-            
-        # apply_icon_button_style 함수 사용하여 빨간색 호출벨 아이콘 표시
-        RoundButtonStyle.apply_icon_button_style(
-            button=self.callbell_button,
-            width=150,
-            height=80,
-            icon_path=":/file/CallBell/bell_on_red.png",
-            icon_size=60,
-            border_radius=3
-        )
-        
-        # 상태 메시지 업데이트
-        short_uuid = current_bell['uuid'][:8] if len(current_bell['uuid']) > 8 else current_bell['uuid']
-        print(f"현재 선택된 호출벨: {short_uuid}... ({current_bell['time']})")
+    # 호출벨 관련 메서드는 on_callbell_detected, activate_callbell, reset_callbell로 대체되었습니다.
     
     def get_random_color(self):
         """중복 없이 랜덤 색상 반환, 모두 소진 시 리셋"""
@@ -2199,28 +2162,7 @@ class LocationAddView(QWidget):
         self.available_colors.remove(color)
         return color
     
-    def cycle_next_bell(self):
-        """다음 호출벨로 전환"""
-        if len(self.ringo_bells) <= 1:
-            return
-            
-        # 현재 호출벨 비활성화
-        if self.current_bell_index < len(self.ringo_bells):
-            self.ringo_bells[self.current_bell_index]['active'] = False
-            
-        # 다음 호출벨로 전환
-        self.current_bell_index = (self.current_bell_index + 1) % len(self.ringo_bells)
-        
-        # 새로 선택된 호출벨 활성화
-        current_bell = self.ringo_bells[self.current_bell_index]
-        current_bell['active'] = True
-        self.ringo_uuid = current_bell['uuid']
-        
-        # 호출벨 UI 업데이트
-        self.update_callbell_ui()
-        
-        # 호출벨 전환 메시지
-        print(f"호출벨 전환: {current_bell['uuid'][:8]}... 활성화")
+    # 호출벨 전환 메서드는 새로운 호출벨 감지 로직으로 대체되었습니다.
 
     def on_position_clicked(self, x, y):
         """그래픽 뷰 클릭 시"""
@@ -2288,70 +2230,11 @@ class LocationAddView(QWidget):
         except Exception as e:
             print(f"Model에서 위치 데이터 업데이트 중 오류 발생: {str(e)}")
 
-    def setup_bell_menu(self):
-        """호출벨 선택 메뉴 설정"""
-        # 호출벨 선택 메뉴 생성
-        self.bell_menu = QMenu(self)
-        self.bell_menu.setStyleSheet("""
-            QMenu {
-                background-color: #2D2D30;
-                color: white;
-                border: 1px solid #3E3E42;
-                padding: 5px;
-            }
-            QMenu::item {
-                padding: 5px 20px;
-                border-radius: 4px;
-            }
-            QMenu::item:selected {
-                background-color: #3E3E42;
-            }
-        """)
+    # 호출벨 메뉴 관련 메서드는 새로운 호출벨 감지 로직으로 대체되었습니다.
         
-        # 호출벨 버튼에 우클릭 이벤트 연결
-        self.callbell_button.setContextMenuPolicy(Qt.CustomContextMenu)
-        self.callbell_button.customContextMenuRequested.connect(self.show_bell_menu)
+    # 호출벨 메뉴 관련 메서드는 새로운 호출벨 감지 로직으로 대체되었습니다.
         
-    def show_bell_menu(self, pos):
-        """호출벨 선택 메뉴 표시"""
-        # 메뉴가 비어있지 않으면 모든 항목 제거
-        self.bell_menu.clear()
-        
-        # 호출벨이 없으면 메뉴 표시 안함
-        if not self.ringo_bells:
-            return
-            
-        # 호출벨 목록 메뉴 생성
-        for i, bell in enumerate(self.ringo_bells):
-            action_text = f"호출벨 {i+1}: {bell['uuid'][:8]}... ({bell['time']})"
-            action = QAction(action_text, self)
-            # 액션에 호출벨 인덱스 데이터 연결
-            action.setData(i)
-            # 현재 선택된 호출벨이면 체크 표시
-            action.setCheckable(True)
-            action.setChecked(i == self.current_bell_index)
-            # 액션 클릭 시 해당 호출벨 선택
-            action.triggered.connect(self.select_bell_from_menu)
-            self.bell_menu.addAction(action)
-        
-        # 호출벨 버튼 위치에 메뉴 표시
-        self.bell_menu.popup(self.callbell_button.mapToGlobal(pos))
-        
-    def select_bell_from_menu(self):
-        """메뉴에서 선택한 호출벨로 전환"""
-        action = self.sender()
-        if action and isinstance(action.data(), int):
-            index = action.data()
-            if 0 <= index < len(self.ringo_bells):
-                self.current_bell_index = index
-                current_bell = self.ringo_bells[self.current_bell_index]
-                self.ringo_uuid = current_bell['uuid']
-                
-                # UI 업데이트
-                self.update_callbell_ui()
-                
-                # 선택한 호출벨 정보 표시
-                print(f"선택한 호출벨: {self.ringo_uuid}")
+    # 호출벨 메뉴 관련 메서드는 새로운 호출벨 감지 로직으로 대체되었습니다.
 
     def toggle_area_control(self):
         """영역 설정 모드 전환"""
@@ -4342,8 +4225,13 @@ class LocationAddView(QWidget):
         Returns:
             QPointF: 씬 좌표
         """
-        if not self.map_manager.map_info:
+        if not hasattr(self, 'map_manager') or self.map_manager is None:
+            print("[convert_map_to_scene_coords] 맵 매니저가 초기화되지 않았습니다.")
+            return QPointF(0, 0)
+            
+        if not hasattr(self.map_manager, 'map_info') or not self.map_manager.map_info:
             self.map_manager.setup_default_map_info()
+            print("[convert_map_to_scene_coords] 맵 정보가 없어 기본값으로 초기화했습니다.")
 
         map_info = self.map_manager.map_info
         resolution = map_info.resolution

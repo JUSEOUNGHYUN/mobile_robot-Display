@@ -46,35 +46,9 @@ class Ui_LocationAddView(object):
         self.status_widget = QWidget(self.content_widget)
         self.status_widget.setObjectName(u"status_widget")
         self.status_widget.setGeometry(QRect(10, 10, 991, 91))
-        self.callbell_button = QPushButton(self.status_widget)
-        self.callbell_button.setObjectName(u"callbell_button")
-        self.callbell_button.setGeometry(QRect(10, 10, 161, 45))
-        self.callbell_button.setMinimumSize(QSize(120, 45))
-        font = QFont()
-        font.setFamilies([u"Noto Sans KR Black"])
-        font.setBold(True)
-        self.callbell_button.setFont(font)
-        self.callbell_button.setCursor(QCursor(Qt.PointingHandCursor))
-        self.callbell_button.setStyleSheet(u"QPushButton {\n"
-"    background-color: #2cbb5d;\n"
-"    color: white;\n"
-"	font-family: \"Noto Sans KR Black\";\n"
-"    border: none;\n"
-"    border-radius: 8px;\n"
-"    padding: 8px 16px;\n"
-"    font-size: 16px;\n"
-"    font-weight: bold;\n"
-"}\n"
-"QPushButton:hover {\n"
-"    background-color: #34cc6a;\n"
-"}\n"
-"QPushButton:pressed {\n"
-"    background-color: #249d4e;\n"
-"}\n"
-"")
         self.destination_name_input = QLineEdit(self.status_widget)
         self.destination_name_input.setObjectName(u"destination_name_input")
-        self.destination_name_input.setGeometry(QRect(180, 10, 191, 51))
+        self.destination_name_input.setGeometry(QRect(200, 10, 191, 51))
         self.destination_name_input.setStyleSheet(u"QLineEdit {\n"
 "    background-color: white;\n"
 "    color: black;\n"
@@ -83,6 +57,65 @@ class Ui_LocationAddView(object):
 "    padding: 12px;\n"
 "    font-size: 14px;\n"
 "}")
+        self.not_called_button = QPushButton(self.status_widget)
+        self.not_called_button.setObjectName(u"not_called_button")
+        self.not_called_button.setGeometry(QRect(10, 0, 161, 71))
+        self.not_called_button.setMinimumSize(QSize(0, 0))
+        self.not_called_button.setMaximumSize(QSize(1000, 1000))
+        font = QFont()
+        font.setFamilies([u"Noto Sans KR Black"])
+        self.not_called_button.setFont(font)
+        self.not_called_button.setStyleSheet(u"QPushButton {\n"
+"    border-radius: 12px;                /* \ub465\uadfc \ud14c\ub450\ub9ac */\n"
+"    background-color: white;          /* \ubc1d\uc740 \ud68c\uc0c9 \ubc30\uacbd */\n"
+"    padding: 6px 12px;                  /* \ub0b4\ubd80 \uc5ec\ubc31 */\n"
+"    text-align: left;                   /* \ud14d\uc2a4\ud2b8 \uc67c\ucabd \uc815\ub82c */\n"
+"    padding-left: 10px;                 /* \uc544\uc774\ucf58 \uacf5\uac04 \ud655\ubcf4 */\n"
+"	font-family: \"Noto Sans KR Black\";\n"
+"    font-size: 18px;\n"
+"    color: #000000;                     /* \uac80\uc815\uc0c9 \uae00\uc790 */\n"
+"    qproperty-icon: url(:/file/CallBell/bell_off.png);\n"
+"    qproperty-iconSize: 65px 65px;\n"
+"}\n"
+"")
+        self.callbell_activated_button = QPushButton(self.status_widget)
+        self.callbell_activated_button.setObjectName(u"callbell_activated_button")
+        self.callbell_activated_button.setGeometry(QRect(0, 0, 181, 71))
+        self.callbell_activated_button.setMinimumSize(QSize(0, 0))
+        self.callbell_activated_button.setMaximumSize(QSize(1000, 1000))
+        self.callbell_activated_button.setFont(font)
+        self.callbell_activated_button.setStyleSheet(u"QPushButton {\n"
+"    border-radius: 12px;                /* \ub465\uadfc \ud14c\ub450\ub9ac */\n"
+"    background-color: white;          /* \ubc1d\uc740 \ud68c\uc0c9 \ubc30\uacbd */\n"
+"    padding: 6px 12px;                  /* \ub0b4\ubd80 \uc5ec\ubc31 */\n"
+"    text-align: left;                   /* \ud14d\uc2a4\ud2b8 \uc67c\ucabd \uc815\ub82c */\n"
+"    padding-left: 10px;                 /* \uc544\uc774\ucf58 \uacf5\uac04 \ud655\ubcf4 */\n"
+"	font-family: \"Noto Sans KR Black\";\n"
+"    font-size: 18px;\n"
+"    color: #000000;                     /* \uac80\uc815\uc0c9 \uae00\uc790 */\n"
+"    qproperty-icon: url(:/file/CallBell/bell_on_red.png);\n"
+"    qproperty-iconSize: 65px 65px;\n"
+"}\n"
+"")
+        self.updating_call_button = QPushButton(self.status_widget)
+        self.updating_call_button.setObjectName(u"updating_call_button")
+        self.updating_call_button.setGeometry(QRect(0, 0, 181, 71))
+        self.updating_call_button.setMinimumSize(QSize(0, 0))
+        self.updating_call_button.setMaximumSize(QSize(1000, 1000))
+        self.updating_call_button.setFont(font)
+        self.updating_call_button.setStyleSheet(u"QPushButton {\n"
+"    border-radius: 12px;                /* \ub465\uadfc \ud14c\ub450\ub9ac */\n"
+"    background-color: white;          /* \ubc1d\uc740 \ud68c\uc0c9 \ubc30\uacbd */\n"
+"    padding: 6px 12px;                  /* \ub0b4\ubd80 \uc5ec\ubc31 */\n"
+"    text-align: left;                   /* \ud14d\uc2a4\ud2b8 \uc67c\ucabd \uc815\ub82c */\n"
+"    padding-left: 10px;                 /* \uc544\uc774\ucf58 \uacf5\uac04 \ud655\ubcf4 */\n"
+"	font-family: \"Noto Sans KR Black\";\n"
+"    font-size: 18px;\n"
+"    color: #000000;                     /* \uac80\uc815\uc0c9 \uae00\uc790 */\n"
+"    qproperty-icon: url(:/file/CallBell/bell_on.png);\n"
+"    qproperty-iconSize: 65px 65px;\n"
+"}\n"
+"")
         self.apply_area_btn = QPushButton(self.content_widget)
         self.apply_area_btn.setObjectName(u"apply_area_btn")
         self.apply_area_btn.setGeometry(QRect(830, 10, 80, 80))
@@ -671,7 +704,10 @@ class Ui_LocationAddView(object):
         self.set_area_button.setObjectName(u"set_area_button")
         self.set_area_button.setGeometry(QRect(740, 10, 80, 80))
         self.set_area_button.setMinimumSize(QSize(80, 45))
-        self.set_area_button.setFont(font)
+        font1 = QFont()
+        font1.setFamilies([u"Noto Sans KR Black"])
+        font1.setBold(True)
+        self.set_area_button.setFont(font1)
         self.set_area_button.setStyleSheet(u"QPushButton {\n"
 "    background-color: #2A2A2A;\n"
 "    color: white;\n"
@@ -696,7 +732,7 @@ class Ui_LocationAddView(object):
         self.register_button.setObjectName(u"register_button")
         self.register_button.setGeometry(QRect(830, 10, 80, 80))
         self.register_button.setMinimumSize(QSize(0, 0))
-        self.register_button.setFont(font)
+        self.register_button.setFont(font1)
         self.register_button.setStyleSheet(u"QPushButton {\n"
 "    background-color: #2A2A2A;\n"
 "    color: white;\n"
@@ -719,7 +755,7 @@ class Ui_LocationAddView(object):
         self.cancel_button.setObjectName(u"cancel_button")
         self.cancel_button.setGeometry(QRect(920, 10, 80, 80))
         self.cancel_button.setMinimumSize(QSize(80, 80))
-        self.cancel_button.setFont(font)
+        self.cancel_button.setFont(font1)
         self.cancel_button.setStyleSheet(u"QPushButton {\n"
 "    background-color: #2A2A2A;\n"
 "    color: white;\n"
@@ -820,46 +856,6 @@ class Ui_LocationAddView(object):
 "    font-family: 'Noto Sans KR Black';\n"
 "    background: transparent;\n"
 "}")
-        self.not_called_button = QPushButton(self.content_widget)
-        self.not_called_button.setObjectName(u"not_called_button")
-        self.not_called_button.setGeometry(QRect(120, 140, 161, 71))
-        self.not_called_button.setMinimumSize(QSize(0, 0))
-        self.not_called_button.setMaximumSize(QSize(1000, 1000))
-        font1 = QFont()
-        font1.setFamilies([u"Noto Sans KR Black"])
-        self.not_called_button.setFont(font1)
-        self.not_called_button.setStyleSheet(u"QPushButton {\n"
-"    border-radius: 12px;                /* \ub465\uadfc \ud14c\ub450\ub9ac */\n"
-"    background-color: white;          /* \ubc1d\uc740 \ud68c\uc0c9 \ubc30\uacbd */\n"
-"    padding: 6px 12px;                  /* \ub0b4\ubd80 \uc5ec\ubc31 */\n"
-"    text-align: left;                   /* \ud14d\uc2a4\ud2b8 \uc67c\ucabd \uc815\ub82c */\n"
-"    padding-left: 10px;                 /* \uc544\uc774\ucf58 \uacf5\uac04 \ud655\ubcf4 */\n"
-"	font-family: \"Noto Sans KR Black\";\n"
-"    font-size: 18px;\n"
-"    color: #000000;                     /* \uac80\uc815\uc0c9 \uae00\uc790 */\n"
-"    qproperty-icon: url(:/file/CallBell/bell_off.png);\n"
-"    qproperty-iconSize: 65px 65px;\n"
-"}\n"
-"")
-        self.callbell_activated_button = QPushButton(self.content_widget)
-        self.callbell_activated_button.setObjectName(u"callbell_activated_button")
-        self.callbell_activated_button.setGeometry(QRect(120, 230, 181, 71))
-        self.callbell_activated_button.setMinimumSize(QSize(0, 0))
-        self.callbell_activated_button.setMaximumSize(QSize(1000, 1000))
-        self.callbell_activated_button.setFont(font1)
-        self.callbell_activated_button.setStyleSheet(u"QPushButton {\n"
-"    border-radius: 12px;                /* \ub465\uadfc \ud14c\ub450\ub9ac */\n"
-"    background-color: white;          /* \ubc1d\uc740 \ud68c\uc0c9 \ubc30\uacbd */\n"
-"    padding: 6px 12px;                  /* \ub0b4\ubd80 \uc5ec\ubc31 */\n"
-"    text-align: left;                   /* \ud14d\uc2a4\ud2b8 \uc67c\ucabd \uc815\ub82c */\n"
-"    padding-left: 10px;                 /* \uc544\uc774\ucf58 \uacf5\uac04 \ud655\ubcf4 */\n"
-"	font-family: \"Noto Sans KR Black\";\n"
-"    font-size: 18px;\n"
-"    color: #000000;                     /* \uac80\uc815\uc0c9 \uae00\uc790 */\n"
-"    qproperty-icon: url(:/file/CallBell/bell_on_red.png);\n"
-"    qproperty-iconSize: 65px 65px;\n"
-"}\n"
-"")
         self.status_widget.raise_()
         self.map_view.raise_()
         self.apply_area_btn.raise_()
@@ -874,8 +870,6 @@ class Ui_LocationAddView(object):
         self.cancel_button.raise_()
         self.horizontalLayoutWidget.raise_()
         self.navigation_control_widget.raise_()
-        self.not_called_button.raise_()
-        self.callbell_activated_button.raise_()
 
         self.main_layout.addWidget(self.content_widget)
 
@@ -887,9 +881,14 @@ class Ui_LocationAddView(object):
 
     def retranslateUi(self, LocationAddView):
         LocationAddView.setWindowTitle(QCoreApplication.translate("LocationAddView", u"Dentium", None))
-        self.callbell_button.setText("")
         self.destination_name_input.setInputMask(QCoreApplication.translate("LocationAddView", u"q1", None))
         self.destination_name_input.setPlaceholderText(QCoreApplication.translate("LocationAddView", u"\uc774\ub984\uc744 \uc785\ub825\ud558\uc138\uc694", None))
+        self.not_called_button.setText(QCoreApplication.translate("LocationAddView", u"   Not\n"
+"Called", None))
+        self.callbell_activated_button.setText(QCoreApplication.translate("LocationAddView", u"  CallBell\n"
+"Activated", None))
+        self.updating_call_button.setText(QCoreApplication.translate("LocationAddView", u"Updating\n"
+"    Call", None))
         self.apply_area_btn.setText("")
         self.cancel_area_btn.setText("")
         self.object_zoom_in.setText("")
@@ -935,9 +934,5 @@ class Ui_LocationAddView(object):
         self.map_control_type_button.setText("")
         self.label_6.setText(QCoreApplication.translate("LocationAddView", u"marker", None))
         self.label_7.setText(QCoreApplication.translate("LocationAddView", u"map", None))
-        self.not_called_button.setText(QCoreApplication.translate("LocationAddView", u"Not\n"
-"Called", None))
-        self.callbell_activated_button.setText(QCoreApplication.translate("LocationAddView", u"CallBell\n"
-"Activated", None))
     # retranslateUi
 

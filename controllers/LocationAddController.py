@@ -214,10 +214,10 @@ class LocationAddController(QObject):
             }
         }
         
-        # 링고벨 UUID가 있는 경우 추가
-        if location_data.get('ringo_uuid'):
-            print(f"LocationAddController - UUID 설정: {location_data['ringo_uuid']}")
-            current_data['unique_id'] = location_data['ringo_uuid']
+        # 호출벨 ID가 있는 경우 추가
+        if location_data.get('callbell_id'):
+            print(f"LocationAddController - UUID 설정: {location_data['callbell_id']}")
+            current_data['unique_id'] = location_data['callbell_id']
             current_data['label'] = 'Yes'
         else:
             current_data['unique_id'] = ""
@@ -257,30 +257,52 @@ class LocationAddController(QObject):
     def on_cancel(self):
         """취소 처리"""
         try:
-            self.view.cleanup_resources()
+            # 뷰 리소스 정리
+            if hasattr(self, 'view'):
+                self.view.cleanup_resources()
+                
+            # 컨트롤러 리소스 정리
+            self.cleanup()
         except Exception as e:
-            print(f"뷰 리소스 정리 중 오류 발생: {str(e)}")
+            print(f"리소스 정리 중 오류 발생: {str(e)}")
+            import traceback
+            traceback.print_exc()
 
         # 이전 화면으로 돌아가기
         self.main_controller.show_previous_view()
         
     def cleanup(self):
         """리소스 정리"""
+        import gc
+        
         try:
-            if self.action_manager:
-                self.action_manager.cleanup()
-                self.action_manager = None
+            # 액션 클라이언트 정리
+            if hasattr(self, 'action_manager') and self.action_manager:
+                try:
+                    self.action_manager.cleanup()
+                except Exception as e:
+                    print(f"액션 매니저 정리 중 오류 발생: {str(e)}")
+                finally:
+                    self.action_manager = None
+                    
             self.ros2_initialized = False
             
             # 금지 구역 발행자 정리
             if hasattr(self, 'keepout_zone_publisher'):
                 try:
                     self.keepout_zone_publisher.cleanup()
+                    self.keepout_zone_publisher = None
                 except Exception as e:
                     print(f"금지 구역 발행자 정리 중 오류 발생: {str(e)}")
+                    
+            # 가비지 컬렉션 강제 실행
+            gc.collect()
+            
+            print("LocationAddController 리소스 정리 완료")
         except Exception as e:
             print(f"ROS2 정리 중 오류 발생: {str(e)}")
-            self.action_manager = None
+            if hasattr(self, 'action_manager'):
+                self.action_manager = None
             self.ros2_initialized = False
 
     # 맵 컨트롤 핸들러 함수
