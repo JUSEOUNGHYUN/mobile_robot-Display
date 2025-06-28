@@ -777,7 +777,7 @@ class Ui_LocationAddView(object):
 "}")
         self.horizontalLayoutWidget = QWidget(self.content_widget)
         self.horizontalLayoutWidget.setObjectName(u"horizontalLayoutWidget")
-        self.horizontalLayoutWidget.setGeometry(QRect(20, 70, 801, 31))
+        self.horizontalLayoutWidget.setGeometry(QRect(20, 10, 801, 91))
         self.area_list_layout = QHBoxLayout(self.horizontalLayoutWidget)
         self.area_list_layout.setObjectName(u"area_list_layout")
         self.area_list_layout.setContentsMargins(0, 0, 0, 0)

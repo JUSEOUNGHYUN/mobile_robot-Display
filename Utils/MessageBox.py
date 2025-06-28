@@ -20,7 +20,7 @@ class MessageBox(QDialog):
         super().__init__(parent)
         self.setWindowTitle(title)
         self.setFixedSize(400, 200)
-        self.setStyleSheet("background-color: black; color: white;")
+        self.setStyleSheet("background-color: white; color: black;")
         
         # 타이틀 바 제거
         self.setWindowFlags(Qt.Dialog | Qt.FramelessWindowHint)
@@ -31,16 +31,16 @@ class MessageBox(QDialog):
         
         # 타이틀 라벨
         title_label = QLabel(title)
-        title_label.setFont(QFont('Arial', 18, QFont.Bold))
+        title_label.setFont(QFont('Noto Sans KR Black', 18, QFont.Bold))
         title_label.setAlignment(Qt.AlignCenter)
-        title_label.setStyleSheet("color: white; border-bottom: 1px solid #555;")
+        title_label.setStyleSheet("color: black; border-bottom: 1px solid #555;")
         layout.addWidget(title_label)
         
         # 메시지 라벨
         message_label = QLabel(message)
-        message_label.setFont(QFont('Arial', 20))
+        message_label.setFont(QFont('Noto Sans KR Black', 20))
         message_label.setAlignment(Qt.AlignCenter)
-        message_label.setStyleSheet("color: white;")
+        message_label.setStyleSheet("color: black;")
         message_label.setWordWrap(True)
         layout.addWidget(message_label)
         layout.addStretch()
@@ -52,14 +52,22 @@ class MessageBox(QDialog):
         # 버튼 스타일
         button_style = """
             QPushButton {
-                background-color: #555555;
-                color: white;
-                border-radius: 5px;
-                min-width: 80px;
-                padding: 8px 16px;
+                background-color: #2A2A2A;
+                background-color: rgba(255, 255, 255, 180); /* 투명도 추가 */
+                border: 1px solid #444444;
+		        min-width: 80px;
+                border-radius: 6px;
             }
             QPushButton:hover {
-                background-color: #777777;
+                background-color: #3A3A3A;
+                background-color: rgba(58, 58, 58, 200); /* hover 시 투명도 */
+                border: 1px solid #666666;
+            }
+            QPushButton:pressed {
+                background-color: rgba(51, 51, 51, 220); /* 클릭 시 투명도 */
+            }
+            QPushButton:checked {
+                background-color: rgba(70, 130, 180, 220); /* 클릭 시 투명도 */
             }
         """
         

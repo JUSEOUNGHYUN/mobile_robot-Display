@@ -1408,9 +1408,9 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>70</y>
+        <y>10</y>
         <width>801</width>
-        <height>31</height>
+        <height>91</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="area_list_layout"/>
