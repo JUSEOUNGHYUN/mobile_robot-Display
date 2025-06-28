@@ -1,0 +1,830 @@
+[0.000000] (-) TimerEvent: {}
+[0.001685] (md_interfaces) JobQueued: {'identifier': 'md_interfaces', 'dependencies': OrderedDict()}
+[0.001914] (md_interfaces) JobStarted: {'identifier': 'md_interfaces'}
+[0.043475] (md_interfaces) JobProgress: {'identifier': 'md_interfaces', 'progress': 'cmake'}
+[0.054107] (md_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces', '-DCMAKE_INSTALL_PREFIX=/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces'], 'cwd': '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dentium'), ('SSH_CLIENT', '192.168.104.128 51226 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/dentium'), ('OLDPWD', '/home/dentium/Desktop/work/Projects/TFRobot'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dentium'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/dentium/.local/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.104.128 51226 192.168.196.50 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.092681] (-) TimerEvent: {}
+[0.195570] (-) TimerEvent: {}
+[0.296512] (-) TimerEvent: {}
+[0.397575] (-) TimerEvent: {}
+[0.487083] (md_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.497793] (-) TimerEvent: {}
+[0.600258] (-) TimerEvent: {}
+[0.701269] (-) TimerEvent: {}
+[0.802297] (-) TimerEvent: {}
+[0.890904] (md_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.902528] (-) TimerEvent: {}
+[0.920943] (md_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[1.002798] (-) TimerEvent: {}
+[1.103726] (-) TimerEvent: {}
+[1.204663] (-) TimerEvent: {}
+[1.305570] (-) TimerEvent: {}
+[1.406687] (-) TimerEvent: {}
+[1.428253] (md_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[1.437127] (md_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.506979] (-) TimerEvent: {}
+[1.608019] (-) TimerEvent: {}
+[1.708916] (-) TimerEvent: {}
+[1.809929] (-) TimerEvent: {}
+[1.861018] (md_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.910234] (-) TimerEvent: {}
+[1.938093] (md_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.940138] (md_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.955643] (md_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[2.010448] (-) TimerEvent: {}
+[2.112097] (-) TimerEvent: {}
+[2.214591] (-) TimerEvent: {}
+[2.315630] (-) TimerEvent: {}
+[2.416653] (-) TimerEvent: {}
+[2.421837] (md_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[2.430539] (md_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.516974] (-) TimerEvent: {}
+[2.618041] (-) TimerEvent: {}
+[2.719078] (-) TimerEvent: {}
+[2.820377] (-) TimerEvent: {}
+[2.876548] (md_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.920686] (-) TimerEvent: {}
+[2.944875] (md_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.947447] (md_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.964229] (md_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[3.020928] (-) TimerEvent: {}
+[3.087873] (md_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[3.088890] (md_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.121214] (-) TimerEvent: {}
+[3.222357] (-) TimerEvent: {}
+[3.323257] (-) TimerEvent: {}
+[3.424163] (-) TimerEvent: {}
+[3.525190] (-) TimerEvent: {}
+[3.626183] (-) TimerEvent: {}
+[3.726979] (-) TimerEvent: {}
+[3.827817] (-) TimerEvent: {}
+[3.928741] (-) TimerEvent: {}
+[4.029797] (-) TimerEvent: {}
+[4.118932] (md_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[4.129987] (-) TimerEvent: {}
+[4.136874] (md_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[4.171459] (md_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[4.230277] (-) TimerEvent: {}
+[4.331117] (-) TimerEvent: {}
+[4.432016] (-) TimerEvent: {}
+[4.533275] (-) TimerEvent: {}
+[4.635059] (-) TimerEvent: {}
+[4.681540] (md_interfaces) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[4.735265] (-) TimerEvent: {}
+[4.802289] (md_interfaces) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[4.835525] (-) TimerEvent: {}
+[4.936491] (-) TimerEvent: {}
+[5.037500] (-) TimerEvent: {}
+[5.138897] (-) TimerEvent: {}
+[5.156644] (md_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[5.239126] (-) TimerEvent: {}
+[5.278937] (md_interfaces) StdoutLine: {'line': b'-- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)\n'}
+[5.339357] (-) TimerEvent: {}
+[5.430427] (md_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[5.439646] (-) TimerEvent: {}
+[5.541080] (-) TimerEvent: {}
+[5.642610] (-) TimerEvent: {}
+[5.743894] (-) TimerEvent: {}
+[5.845288] (-) TimerEvent: {}
+[5.946576] (-) TimerEvent: {}
+[6.047472] (-) TimerEvent: {}
+[6.054942] (md_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[6.147717] (-) TimerEvent: {}
+[6.248712] (-) TimerEvent: {}
+[6.349778] (-) TimerEvent: {}
+[6.450900] (-) TimerEvent: {}
+[6.512459] (md_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.551095] (-) TimerEvent: {}
+[6.585039] (md_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[6.651291] (-) TimerEvent: {}
+[6.679137] (md_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[6.684614] (md_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[6.751526] (-) TimerEvent: {}
+[6.795760] (md_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[6.796803] (md_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[6.797186] (md_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[6.797489] (md_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so\n'}
+[6.851726] (-) TimerEvent: {}
+[6.885189] (md_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[6.951964] (-) TimerEvent: {}
+[7.052932] (-) TimerEvent: {}
+[7.123693] (md_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[7.153178] (-) TimerEvent: {}
+[7.254241] (-) TimerEvent: {}
+[7.355335] (-) TimerEvent: {}
+[7.413390] (md_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[7.455720] (-) TimerEvent: {}
+[7.484831] (md_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces\n'}
+[7.514120] (md_interfaces) CommandEnded: {'returncode': 0}
+[7.518364] (md_interfaces) JobProgress: {'identifier': 'md_interfaces', 'progress': 'build'}
+[7.524322] (md_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces', '--', '-j4', '-l4'], 'cwd': '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dentium'), ('SSH_CLIENT', '192.168.104.128 51226 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/dentium'), ('OLDPWD', '/home/dentium/Desktop/work/Projects/TFRobot'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dentium'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/dentium/.local/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.104.128 51226 192.168.196.50 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[7.555957] (-) TimerEvent: {}
+[7.657634] (-) TimerEvent: {}
+[7.751908] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__cpp\x1b[0m\n'}
+[7.754355] (md_interfaces) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[7.757841] (-) TimerEvent: {}
+[7.803824] (md_interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[7.858083] (-) TimerEvent: {}
+[7.959019] (-) TimerEvent: {}
+[8.059844] (-) TimerEvent: {}
+[8.160731] (-) TimerEvent: {}
+[8.261605] (-) TimerEvent: {}
+[8.362773] (-) TimerEvent: {}
+[8.463627] (-) TimerEvent: {}
+[8.564550] (-) TimerEvent: {}
+[8.665406] (-) TimerEvent: {}
+[8.766277] (-) TimerEvent: {}
+[8.867252] (-) TimerEvent: {}
+[8.968874] (-) TimerEvent: {}
+[9.070613] (-) TimerEvent: {}
+[9.171536] (-) TimerEvent: {}
+[9.272444] (-) TimerEvent: {}
+[9.373303] (-) TimerEvent: {}
+[9.474084] (-) TimerEvent: {}
+[9.575011] (-) TimerEvent: {}
+[9.675828] (-) TimerEvent: {}
+[9.776740] (-) TimerEvent: {}
+[9.877626] (-) TimerEvent: {}
+[9.978629] (-) TimerEvent: {}
+[10.079541] (-) TimerEvent: {}
+[10.180467] (-) TimerEvent: {}
+[10.281332] (-) TimerEvent: {}
+[10.383064] (-) TimerEvent: {}
+[10.485048] (-) TimerEvent: {}
+[10.587025] (-) TimerEvent: {}
+[10.688786] (-) TimerEvent: {}
+[10.790325] (-) TimerEvent: {}
+[10.801102] (md_interfaces) StdoutLine: {'line': b'[  2%] Built target md_interfaces__cpp\n'}
+[10.890616] (-) TimerEvent: {}
+[10.992119] (-) TimerEvent: {}
+[10.995352] (md_interfaces) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[10.998537] (md_interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[11.010240] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__rosidl_generator_c\x1b[0m\n'}
+[11.015425] (md_interfaces) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[11.092334] (-) TimerEvent: {}
+[11.122527] (md_interfaces) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/pose__functions.c.o\x1b[0m\n'}
+[11.192578] (-) TimerEvent: {}
+[11.294236] (-) TimerEvent: {}
+[11.402359] (-) TimerEvent: {}
+[11.450603] (md_interfaces) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/md_robot_msg1__functions.c.o\x1b[0m\n'}
+[11.502551] (-) TimerEvent: {}
+[11.604127] (-) TimerEvent: {}
+[11.705604] (-) TimerEvent: {}
+[11.731668] (md_interfaces) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/md_robot_msg2__functions.c.o\x1b[0m\n'}
+[11.805823] (-) TimerEvent: {}
+[11.907548] (-) TimerEvent: {}
+[12.008832] (-) TimerEvent: {}
+[12.080408] (md_interfaces) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/pos_vel_timestamped__functions.c.o\x1b[0m\n'}
+[12.109048] (-) TimerEvent: {}
+[12.210704] (-) TimerEvent: {}
+[12.311982] (-) TimerEvent: {}
+[12.413492] (-) TimerEvent: {}
+[12.515192] (-) TimerEvent: {}
+[12.518470] (md_interfaces) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/md_robot_slow_start_stop__functions.c.o\x1b[0m\n'}
+[12.615431] (-) TimerEvent: {}
+[12.717116] (-) TimerEvent: {}
+[12.818570] (-) TimerEvent: {}
+[12.920107] (-) TimerEvent: {}
+[12.936237] (md_interfaces) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/md_robot_user_param__functions.c.o\x1b[0m\n'}
+[13.020369] (-) TimerEvent: {}
+[13.121953] (-) TimerEvent: {}
+[13.223658] (-) TimerEvent: {}
+[13.282462] (md_interfaces) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/md_motor_ticks_and_velo__functions.c.o\x1b[0m\n'}
+[13.325289] (-) TimerEvent: {}
+[13.426935] (-) TimerEvent: {}
+[13.528525] (-) TimerEvent: {}
+[13.629935] (-) TimerEvent: {}
+[13.715137] (md_interfaces) StdoutLine: {'line': b'[ 16%] \x1b[32m\x1b[1mLinking C shared library libmd_interfaces__rosidl_generator_c.so\x1b[0m\n'}
+[13.730240] (-) TimerEvent: {}
+[13.831978] (-) TimerEvent: {}
+[13.843517] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[13.932242] (-) TimerEvent: {}
+[13.988341] (md_interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/pose__type_support.cpp.o\x1b[0m\n'}
+[14.032490] (-) TimerEvent: {}
+[14.053914] (md_interfaces) StdoutLine: {'line': b'[ 17%] Built target md_interfaces__rosidl_generator_c\n'}
+[14.071495] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[14.121316] (md_interfaces) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/md_robot_msg1__type_support.cpp.o\x1b[0m\n'}
+[14.132731] (-) TimerEvent: {}
+[14.215045] (md_interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/pose__type_support.cpp.o\x1b[0m\n'}
+[14.233197] (-) TimerEvent: {}
+[14.334167] (-) TimerEvent: {}
+[14.435103] (-) TimerEvent: {}
+[14.536956] (-) TimerEvent: {}
+[14.638887] (-) TimerEvent: {}
+[14.740439] (-) TimerEvent: {}
+[14.811083] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[14.840696] (-) TimerEvent: {}
+[14.941684] (-) TimerEvent: {}
+[15.042746] (-) TimerEvent: {}
+[15.105149] (md_interfaces) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/pose__type_support.cpp.o\x1b[0m\n'}
+[15.143019] (-) TimerEvent: {}
+[15.244028] (-) TimerEvent: {}
+[15.345012] (-) TimerEvent: {}
+[15.446042] (-) TimerEvent: {}
+[15.547006] (-) TimerEvent: {}
+[15.647974] (-) TimerEvent: {}
+[15.748880] (-) TimerEvent: {}
+[15.849811] (-) TimerEvent: {}
+[15.856086] (md_interfaces) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/md_robot_msg2__type_support.cpp.o\x1b[0m\n'}
+[15.933259] (md_interfaces) StdoutLine: {'line': b'[ 24%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[15.954967] (-) TimerEvent: {}
+[16.056462] (-) TimerEvent: {}
+[16.129637] (md_interfaces) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/md_robot_msg1__type_support.cpp.o\x1b[0m\n'}
+[16.156688] (-) TimerEvent: {}
+[16.257522] (-) TimerEvent: {}
+[16.358976] (-) TimerEvent: {}
+[16.459883] (-) TimerEvent: {}
+[16.560688] (-) TimerEvent: {}
+[16.662273] (-) TimerEvent: {}
+[16.763653] (-) TimerEvent: {}
+[16.865249] (-) TimerEvent: {}
+[16.966610] (-) TimerEvent: {}
+[17.067995] (-) TimerEvent: {}
+[17.169379] (-) TimerEvent: {}
+[17.270933] (-) TimerEvent: {}
+[17.372372] (-) TimerEvent: {}
+[17.473750] (-) TimerEvent: {}
+[17.575329] (-) TimerEvent: {}
+[17.676773] (-) TimerEvent: {}
+[17.779394] (-) TimerEvent: {}
+[17.823754] (md_interfaces) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/pos_vel_timestamped__type_support.cpp.o\x1b[0m\n'}
+[17.843650] (md_interfaces) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/md_robot_msg1__type_support.cpp.o\x1b[0m\n'}
+[17.879617] (-) TimerEvent: {}
+[17.981245] (-) TimerEvent: {}
+[18.059542] (md_interfaces) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/md_robot_msg2__type_support.cpp.o\x1b[0m\n'}
+[18.081484] (-) TimerEvent: {}
+[18.182809] (-) TimerEvent: {}
+[18.284244] (-) TimerEvent: {}
+[18.385654] (-) TimerEvent: {}
+[18.487207] (-) TimerEvent: {}
+[18.588700] (-) TimerEvent: {}
+[18.690369] (-) TimerEvent: {}
+[18.791922] (-) TimerEvent: {}
+[18.893497] (-) TimerEvent: {}
+[18.995060] (-) TimerEvent: {}
+[19.096784] (-) TimerEvent: {}
+[19.198365] (-) TimerEvent: {}
+[19.299685] (-) TimerEvent: {}
+[19.320890] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[19.399930] (-) TimerEvent: {}
+[19.501274] (-) TimerEvent: {}
+[19.548156] (md_interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/pose__type_support.c.o\x1b[0m\n'}
+[19.601546] (-) TimerEvent: {}
+[19.619977] (md_interfaces) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/md_robot_slow_start_stop__type_support.cpp.o\x1b[0m\n'}
+[19.701792] (-) TimerEvent: {}
+[19.803423] (-) TimerEvent: {}
+[19.880118] (md_interfaces) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_msg1__type_support.c.o\x1b[0m\n'}
+[19.903692] (-) TimerEvent: {}
+[19.968557] (md_interfaces) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/pos_vel_timestamped__type_support.cpp.o\x1b[0m\n'}
+[20.003957] (-) TimerEvent: {}
+[20.105416] (-) TimerEvent: {}
+[20.206891] (-) TimerEvent: {}
+[20.308485] (-) TimerEvent: {}
+[20.310910] (md_interfaces) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_msg2__type_support.c.o\x1b[0m\n'}
+[20.408757] (-) TimerEvent: {}
+[20.510440] (-) TimerEvent: {}
+[20.517182] (md_interfaces) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/md_robot_msg2__type_support.cpp.o\x1b[0m\n'}
+[20.610687] (-) TimerEvent: {}
+[20.640137] (md_interfaces) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/pos_vel_timestamped__type_support.c.o\x1b[0m\n'}
+[20.710956] (-) TimerEvent: {}
+[20.811977] (-) TimerEvent: {}
+[20.912989] (-) TimerEvent: {}
+[20.974103] (md_interfaces) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.c.o\x1b[0m\n'}
+[21.013264] (-) TimerEvent: {}
+[21.115184] (-) TimerEvent: {}
+[21.216134] (-) TimerEvent: {}
+[21.275312] (md_interfaces) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/md_robot_user_param__type_support.cpp.o\x1b[0m\n'}
+[21.316414] (-) TimerEvent: {}
+[21.327650] (md_interfaces) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_user_param__type_support.c.o\x1b[0m\n'}
+[21.416662] (-) TimerEvent: {}
+[21.517651] (-) TimerEvent: {}
+[21.583991] (md_interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.cpp.o\x1b[0m\n'}
+[21.607468] (md_interfaces) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.c.o\x1b[0m\n'}
+[21.617878] (-) TimerEvent: {}
+[21.718915] (-) TimerEvent: {}
+[21.819911] (-) TimerEvent: {}
+[21.921657] (-) TimerEvent: {}
+[21.988099] (md_interfaces) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking C shared library libmd_interfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[22.021889] (-) TimerEvent: {}
+[22.122827] (-) TimerEvent: {}
+[22.223718] (-) TimerEvent: {}
+[22.260240] (md_interfaces) StdoutLine: {'line': b'[ 45%] Built target md_interfaces__rosidl_typesupport_introspection_c\n'}
+[22.323994] (-) TimerEvent: {}
+[22.394960] (md_interfaces) StdoutLine: {'line': b'[ 46%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[22.424263] (-) TimerEvent: {}
+[22.526874] (-) TimerEvent: {}
+[22.627723] (-) TimerEvent: {}
+[22.728639] (-) TimerEvent: {}
+[22.829500] (-) TimerEvent: {}
+[22.857387] (md_interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/pos_vel_timestamped__type_support.cpp.o\x1b[0m\n'}
+[22.929713] (-) TimerEvent: {}
+[23.030779] (-) TimerEvent: {}
+[23.131635] (-) TimerEvent: {}
+[23.232552] (-) TimerEvent: {}
+[23.278958] (md_interfaces) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/md_motor_ticks_and_velo__type_support.cpp.o\x1b[0m\n'}
+[23.332780] (-) TimerEvent: {}
+[23.433874] (-) TimerEvent: {}
+[23.534838] (-) TimerEvent: {}
+[23.607082] (md_interfaces) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/md_robot_user_param__type_support.cpp.o\x1b[0m\n'}
+[23.635039] (-) TimerEvent: {}
+[23.735946] (-) TimerEvent: {}
+[23.839057] (-) TimerEvent: {}
+[23.940382] (-) TimerEvent: {}
+[24.041290] (-) TimerEvent: {}
+[24.142228] (-) TimerEvent: {}
+[24.244553] (-) TimerEvent: {}
+[24.345490] (-) TimerEvent: {}
+[24.446487] (-) TimerEvent: {}
+[24.547433] (-) TimerEvent: {}
+[24.648390] (-) TimerEvent: {}
+[24.750517] (-) TimerEvent: {}
+[24.851512] (-) TimerEvent: {}
+[24.953204] (-) TimerEvent: {}
+[25.054805] (-) TimerEvent: {}
+[25.074006] (md_interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libmd_interfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[25.155066] (-) TimerEvent: {}
+[25.220968] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[25.255315] (-) TimerEvent: {}
+[25.309399] (md_interfaces) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/pose__type_support.cpp.o\x1b[0m\n'}
+[25.355564] (-) TimerEvent: {}
+[25.420130] (md_interfaces) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/md_robot_slow_start_stop__type_support.cpp.o\x1b[0m\n'}
+[25.455803] (-) TimerEvent: {}
+[25.516243] (md_interfaces) StdoutLine: {'line': b'[ 55%] Built target md_interfaces__rosidl_typesupport_cpp\n'}
+[25.517884] (md_interfaces) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.cpp.o\x1b[0m\n'}
+[25.543820] (md_interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/md_robot_msg1__type_support.cpp.o\x1b[0m\n'}
+[25.556041] (-) TimerEvent: {}
+[25.623929] (md_interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/md_robot_user_param__type_support.cpp.o\x1b[0m\n'}
+[25.656303] (-) TimerEvent: {}
+[25.757307] (-) TimerEvent: {}
+[25.832123] (md_interfaces) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/md_robot_msg2__type_support.cpp.o\x1b[0m\n'}
+[25.857581] (-) TimerEvent: {}
+[25.959102] (-) TimerEvent: {}
+[26.060633] (-) TimerEvent: {}
+[26.161645] (-) TimerEvent: {}
+[26.208633] (md_interfaces) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/pos_vel_timestamped__type_support.cpp.o\x1b[0m\n'}
+[26.261912] (-) TimerEvent: {}
+[26.362915] (-) TimerEvent: {}
+[26.459224] (md_interfaces) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/md_robot_slow_start_stop__type_support.cpp.o\x1b[0m\n'}
+[26.463486] (-) TimerEvent: {}
+[26.565445] (-) TimerEvent: {}
+[26.667336] (-) TimerEvent: {}
+[26.694213] (md_interfaces) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/md_robot_user_param__type_support.cpp.o\x1b[0m\n'}
+[26.767600] (-) TimerEvent: {}
+[26.868597] (-) TimerEvent: {}
+[26.970826] (-) TimerEvent: {}
+[27.050565] (md_interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/md_motor_ticks_and_velo__type_support.cpp.o\x1b[0m\n'}
+[27.071107] (-) TimerEvent: {}
+[27.172705] (-) TimerEvent: {}
+[27.275348] (-) TimerEvent: {}
+[27.377192] (-) TimerEvent: {}
+[27.423496] (md_interfaces) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libmd_interfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[27.467666] (md_interfaces) StdoutLine: {'line': b'[ 67%] \x1b[32m\x1b[1mLinking CXX shared library libmd_interfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[27.477438] (-) TimerEvent: {}
+[27.578529] (-) TimerEvent: {}
+[27.679491] (-) TimerEvent: {}
+[27.780405] (-) TimerEvent: {}
+[27.881333] (-) TimerEvent: {}
+[27.883432] (md_interfaces) StdoutLine: {'line': b'[ 67%] Built target md_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[27.932908] (md_interfaces) StdoutLine: {'line': b'[ 67%] Built target md_interfaces__rosidl_typesupport_c\n'}
+[27.974443] (md_interfaces) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/md_motor_ticks_and_velo__type_support.cpp.o\x1b[0m\n'}
+[27.981603] (-) TimerEvent: {}
+[28.082818] (-) TimerEvent: {}
+[28.183848] (-) TimerEvent: {}
+[28.285240] (-) TimerEvent: {}
+[28.386385] (-) TimerEvent: {}
+[28.487337] (-) TimerEvent: {}
+[28.588414] (-) TimerEvent: {}
+[28.689493] (-) TimerEvent: {}
+[28.790578] (-) TimerEvent: {}
+[28.891522] (-) TimerEvent: {}
+[28.992591] (-) TimerEvent: {}
+[29.093700] (-) TimerEvent: {}
+[29.194848] (-) TimerEvent: {}
+[29.296091] (-) TimerEvent: {}
+[29.398267] (-) TimerEvent: {}
+[29.499420] (-) TimerEvent: {}
+[29.600558] (-) TimerEvent: {}
+[29.701761] (-) TimerEvent: {}
+[29.803050] (-) TimerEvent: {}
+[29.904972] (-) TimerEvent: {}
+[30.005196] (md_interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libmd_interfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[30.005988] (-) TimerEvent: {}
+[30.107033] (-) TimerEvent: {}
+[30.208001] (-) TimerEvent: {}
+[30.309041] (-) TimerEvent: {}
+[30.392595] (md_interfaces) StdoutLine: {'line': b'[ 69%] Built target md_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[30.409281] (-) TimerEvent: {}
+[30.444105] (md_interfaces) StdoutLine: {'line': b'[ 70%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[30.509457] (-) TimerEvent: {}
+[30.610405] (-) TimerEvent: {}
+[30.711315] (-) TimerEvent: {}
+[30.812099] (-) TimerEvent: {}
+[30.912909] (-) TimerEvent: {}
+[31.013765] (-) TimerEvent: {}
+[31.114604] (-) TimerEvent: {}
+[31.215456] (-) TimerEvent: {}
+[31.316297] (-) TimerEvent: {}
+[31.417129] (-) TimerEvent: {}
+[31.517960] (-) TimerEvent: {}
+[31.618919] (-) TimerEvent: {}
+[31.719778] (-) TimerEvent: {}
+[31.820639] (-) TimerEvent: {}
+[31.921516] (-) TimerEvent: {}
+[32.022369] (-) TimerEvent: {}
+[32.123276] (-) TimerEvent: {}
+[32.224172] (-) TimerEvent: {}
+[32.325012] (-) TimerEvent: {}
+[32.425841] (-) TimerEvent: {}
+[32.526737] (-) TimerEvent: {}
+[32.627641] (-) TimerEvent: {}
+[32.673765] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[32.727859] (-) TimerEvent: {}
+[32.798038] (md_interfaces) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/pose__type_support_c.cpp.o\x1b[0m\n'}
+[32.805089] (md_interfaces) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/md_robot_msg1__type_support_c.cpp.o\x1b[0m\n'}
+[32.806653] (md_interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/pos_vel_timestamped__type_support_c.cpp.o\x1b[0m\n'}
+[32.813083] (md_interfaces) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/md_robot_msg2__type_support_c.cpp.o\x1b[0m\n'}
+[32.828096] (-) TimerEvent: {}
+[32.929040] (-) TimerEvent: {}
+[33.030000] (-) TimerEvent: {}
+[33.130963] (-) TimerEvent: {}
+[33.231921] (-) TimerEvent: {}
+[33.332870] (-) TimerEvent: {}
+[33.434087] (-) TimerEvent: {}
+[33.535091] (-) TimerEvent: {}
+[33.635984] (-) TimerEvent: {}
+[33.736941] (-) TimerEvent: {}
+[33.837983] (-) TimerEvent: {}
+[33.939014] (-) TimerEvent: {}
+[34.040914] (-) TimerEvent: {}
+[34.141894] (-) TimerEvent: {}
+[34.242911] (-) TimerEvent: {}
+[34.343907] (-) TimerEvent: {}
+[34.444874] (-) TimerEvent: {}
+[34.497672] (md_interfaces) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support_c.cpp.o\x1b[0m\n'}
+[34.507096] (md_interfaces) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/md_robot_user_param__type_support_c.cpp.o\x1b[0m\n'}
+[34.545153] (-) TimerEvent: {}
+[34.636908] (md_interfaces) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support_c.cpp.o\x1b[0m\n'}
+[34.645363] (-) TimerEvent: {}
+[34.746937] (-) TimerEvent: {}
+[34.848423] (-) TimerEvent: {}
+[34.949316] (-) TimerEvent: {}
+[35.050286] (-) TimerEvent: {}
+[35.151176] (-) TimerEvent: {}
+[35.252099] (-) TimerEvent: {}
+[35.353064] (-) TimerEvent: {}
+[35.454000] (-) TimerEvent: {}
+[35.555022] (-) TimerEvent: {}
+[35.655971] (-) TimerEvent: {}
+[35.756905] (-) TimerEvent: {}
+[35.857892] (-) TimerEvent: {}
+[35.958928] (-) TimerEvent: {}
+[36.059869] (-) TimerEvent: {}
+[36.160830] (-) TimerEvent: {}
+[36.261821] (-) TimerEvent: {}
+[36.361513] (md_interfaces) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX shared library libmd_interfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[36.362365] (-) TimerEvent: {}
+[36.463031] (-) TimerEvent: {}
+[36.563989] (-) TimerEvent: {}
+[36.664982] (-) TimerEvent: {}
+[36.738580] (md_interfaces) StdoutLine: {'line': b'[ 81%] Built target md_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[36.765208] (-) TimerEvent: {}
+[36.785934] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces\x1b[0m\n'}
+[36.837655] (md_interfaces) StdoutLine: {'line': b'[ 81%] Built target md_interfaces\n'}
+[36.865453] (-) TimerEvent: {}
+[36.887394] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__py\x1b[0m\n'}
+[36.939709] (md_interfaces) StdoutLine: {'line': b'[ 82%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[36.965617] (-) TimerEvent: {}
+[37.066507] (-) TimerEvent: {}
+[37.167418] (-) TimerEvent: {}
+[37.268281] (-) TimerEvent: {}
+[37.369191] (-) TimerEvent: {}
+[37.470111] (-) TimerEvent: {}
+[37.571040] (-) TimerEvent: {}
+[37.671900] (-) TimerEvent: {}
+[37.772718] (-) TimerEvent: {}
+[37.873493] (-) TimerEvent: {}
+[37.974380] (-) TimerEvent: {}
+[38.075220] (-) TimerEvent: {}
+[38.176383] (-) TimerEvent: {}
+[38.277210] (-) TimerEvent: {}
+[38.377971] (-) TimerEvent: {}
+[38.478819] (-) TimerEvent: {}
+[38.579716] (-) TimerEvent: {}
+[38.680587] (-) TimerEvent: {}
+[38.781456] (-) TimerEvent: {}
+[38.882358] (-) TimerEvent: {}
+[38.983186] (-) TimerEvent: {}
+[39.084063] (-) TimerEvent: {}
+[39.185452] (-) TimerEvent: {}
+[39.286715] (-) TimerEvent: {}
+[39.387492] (-) TimerEvent: {}
+[39.488432] (-) TimerEvent: {}
+[39.589378] (-) TimerEvent: {}
+[39.690226] (-) TimerEvent: {}
+[39.791103] (-) TimerEvent: {}
+[39.891983] (-) TimerEvent: {}
+[39.992914] (-) TimerEvent: {}
+[40.093828] (-) TimerEvent: {}
+[40.194738] (-) TimerEvent: {}
+[40.295617] (-) TimerEvent: {}
+[40.396380] (-) TimerEvent: {}
+[40.497211] (-) TimerEvent: {}
+[40.598094] (-) TimerEvent: {}
+[40.699069] (-) TimerEvent: {}
+[40.799974] (-) TimerEvent: {}
+[40.900854] (-) TimerEvent: {}
+[41.001738] (-) TimerEvent: {}
+[41.102591] (-) TimerEvent: {}
+[41.203445] (-) TimerEvent: {}
+[41.304481] (-) TimerEvent: {}
+[41.405550] (-) TimerEvent: {}
+[41.483756] (md_interfaces) StdoutLine: {'line': b'[ 82%] Built target md_interfaces__py\n'}
+[41.505791] (-) TimerEvent: {}
+[41.531459] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__python\x1b[0m\n'}
+[41.606077] (-) TimerEvent: {}
+[41.707628] (-) TimerEvent: {}
+[41.726306] (md_interfaces) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_pose_s.c.o\x1b[0m\n'}
+[41.727408] (md_interfaces) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_md_robot_msg1_s.c.o\x1b[0m\n'}
+[41.728115] (md_interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_pos_vel_timestamped_s.c.o\x1b[0m\n'}
+[41.760914] (md_interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_md_robot_msg2_s.c.o\x1b[0m\n'}
+[41.807881] (-) TimerEvent: {}
+[41.909310] (-) TimerEvent: {}
+[42.011548] (-) TimerEvent: {}
+[42.113053] (-) TimerEvent: {}
+[42.214718] (-) TimerEvent: {}
+[42.283923] (md_interfaces) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_md_robot_slow_start_stop_s.c.o\x1b[0m\n'}
+[42.309848] (md_interfaces) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_md_robot_user_param_s.c.o\x1b[0m\n'}
+[42.314932] (-) TimerEvent: {}
+[42.328399] (md_interfaces) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_md_motor_ticks_and_velo_s.c.o\x1b[0m\n'}
+[42.415212] (-) TimerEvent: {}
+[42.516971] (-) TimerEvent: {}
+[42.619006] (-) TimerEvent: {}
+[42.721588] (-) TimerEvent: {}
+[42.823109] (-) TimerEvent: {}
+[42.824662] (md_interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/md_interfaces/libmd_interfaces__python.so\x1b[0m\n'}
+[42.923333] (-) TimerEvent: {}
+[43.024867] (-) TimerEvent: {}
+[43.027171] (md_interfaces) StdoutLine: {'line': b'[ 92%] Built target md_interfaces__python\n'}
+[43.078637] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[43.079666] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[43.080764] (md_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target md_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[43.126538] (-) TimerEvent: {}
+[43.202387] (md_interfaces) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/md_interfaces/_md_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[43.217939] (md_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/md_interfaces/_md_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[43.218666] (md_interfaces) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/md_interfaces/_md_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[43.226724] (-) TimerEvent: {}
+[43.328112] (-) TimerEvent: {}
+[43.429515] (-) TimerEvent: {}
+[43.530993] (-) TimerEvent: {}
+[43.632441] (-) TimerEvent: {}
+[43.727260] (md_interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/md_interfaces/md_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[43.732630] (-) TimerEvent: {}
+[43.755584] (md_interfaces) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/md_interfaces/md_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[43.768304] (md_interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/md_interfaces/md_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[43.832891] (-) TimerEvent: {}
+[43.913627] (md_interfaces) StdoutLine: {'line': b'[100%] Built target md_interfaces__rosidl_typesupport_c__pyext\n'}
+[43.933228] (-) TimerEvent: {}
+[43.985372] (md_interfaces) StdoutLine: {'line': b'[100%] Built target md_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[44.033433] (-) TimerEvent: {}
+[44.063336] (md_interfaces) StdoutLine: {'line': b'[100%] Built target md_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[44.124925] (md_interfaces) CommandEnded: {'returncode': 0}
+[44.129308] (md_interfaces) JobProgress: {'identifier': 'md_interfaces', 'progress': 'install'}
+[44.134654] (-) TimerEvent: {}
+[44.186928] (md_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces'], 'cwd': '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dentium'), ('SSH_CLIENT', '192.168.104.128 51226 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-11.4/lib64:'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/dentium'), ('OLDPWD', '/home/dentium/Desktop/work/Projects/TFRobot'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'dentium'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '3'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/dentium/.local/bin:/opt/ros/foxy/bin:/usr/local/cuda-11.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.104.128 51226 192.168.196.50 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[44.228120] (md_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[44.229127] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/ament_index/resource_index/rosidl_interfaces/md_interfaces\n'}
+[44.229639] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces\n'}
+[44.230366] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg\n'}
+[44.230910] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail\n'}
+[44.231446] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__struct.h\n'}
+[44.231926] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__struct.h\n'}
+[44.232524] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__functions.h\n'}
+[44.233250] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__struct.h\n'}
+[44.233877] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__functions.c\n'}
+[44.234275] (-) TimerEvent: {}
+[44.235176] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__struct.h\n'}
+[44.235678] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__functions.c\n'}
+[44.236146] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__functions.h\n'}
+[44.236723] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__struct.h\n'}
+[44.237450] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__functions.c\n'}
+[44.238077] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__functions.c\n'}
+[44.238912] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.h\n'}
+[44.240236] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__functions.c\n'}
+[44.240697] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__functions.h\n'}
+[44.241539] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__functions.h\n'}
+[44.242358] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__functions.h\n'}
+[44.242840] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__functions.h\n'}
+[44.243383] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__type_support.h\n'}
+[44.243973] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__type_support.h\n'}
+[44.244471] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__type_support.h\n'}
+[44.244900] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__functions.c\n'}
+[44.245443] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.h\n'}
+[44.246441] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__functions.h\n'}
+[44.247013] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__functions.c\n'}
+[44.247508] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__type_support.h\n'}
+[44.249528] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__type_support.h\n'}
+[44.250021] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__struct.h\n'}
+[44.250923] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__struct.h\n'}
+[44.251608] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/pos_vel_timestamped.h\n'}
+[44.252010] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_motor_ticks_and_velo.h\n'}
+[44.252511] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_msg2.h\n'}
+[44.253034] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[44.253565] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_msg1.h\n'}
+[44.254039] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_user_param.h\n'}
+[44.254743] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/pose.h\n'}
+[44.255431] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_slow_start_stop.h\n'}
+[44.256816] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/library_path.sh\n'}
+[44.257826] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/library_path.dsv\n'}
+[44.259146] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_generator_c.so\n'}
+[44.263545] (md_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_generator_c.so" to ""\n'}
+[44.264439] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces\n'}
+[44.265172] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg\n'}
+[44.265573] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail\n'}
+[44.266257] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__rosidl_typesupport_fastrtps_c.h\n'}
+[44.266711] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__rosidl_typesupport_fastrtps_c.h\n'}
+[44.267063] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__rosidl_typesupport_fastrtps_c.h\n'}
+[44.267680] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__rosidl_typesupport_fastrtps_c.h\n'}
+[44.268056] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__rosidl_typesupport_fastrtps_c.h\n'}
+[44.268520] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__rosidl_typesupport_fastrtps_c.h\n'}
+[44.269055] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__rosidl_typesupport_fastrtps_c.h\n'}
+[44.269860] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[44.271010] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[44.274266] (md_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[44.275534] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces\n'}
+[44.276273] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg\n'}
+[44.276636] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail\n'}
+[44.277140] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[44.277629] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[44.277995] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[44.278466] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[44.279482] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[44.280146] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[44.280501] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/dds_fastrtps\n'}
+[44.280877] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[44.281368] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[44.281817] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[44.285612] (md_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[44.286483] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces\n'}
+[44.286891] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg\n'}
+[44.287416] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail\n'}
+[44.287734] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__rosidl_typesupport_introspection_c.h\n'}
+[44.288202] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__type_support.c\n'}
+[44.288539] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__type_support.c\n'}
+[44.289045] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.c\n'}
+[44.289564] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__type_support.c\n'}
+[44.290065] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.c\n'}
+[44.290820] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__rosidl_typesupport_introspection_c.h\n'}
+[44.291499] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__rosidl_typesupport_introspection_c.h\n'}
+[44.292141] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__rosidl_typesupport_introspection_c.h\n'}
+[44.292727] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__rosidl_typesupport_introspection_c.h\n'}
+[44.293393] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__rosidl_typesupport_introspection_c.h\n'}
+[44.294043] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__type_support.c\n'}
+[44.294922] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__rosidl_typesupport_introspection_c.h\n'}
+[44.295526] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__type_support.c\n'}
+[44.296271] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[44.297380] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[44.300419] (md_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[44.302109] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_c.so\n'}
+[44.303557] (md_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[44.304178] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces\n'}
+[44.304710] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg\n'}
+[44.305230] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail\n'}
+[44.305560] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__struct.hpp\n'}
+[44.305904] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__builder.hpp\n'}
+[44.306367] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__struct.hpp\n'}
+[44.306865] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__traits.hpp\n'}
+[44.307261] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__builder.hpp\n'}
+[44.307773] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__traits.hpp\n'}
+[44.308378] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__struct.hpp\n'}
+[44.308990] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__builder.hpp\n'}
+[44.309662] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__traits.hpp\n'}
+[44.310394] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__struct.hpp\n'}
+[44.311112] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__type_support.hpp\n'}
+[44.311736] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.hpp\n'}
+[44.312351] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__traits.hpp\n'}
+[44.312962] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__type_support.hpp\n'}
+[44.313583] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__traits.hpp\n'}
+[44.314198] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__struct.hpp\n'}
+[44.314810] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__builder.hpp\n'}
+[44.315427] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__builder.hpp\n'}
+[44.316076] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__builder.hpp\n'}
+[44.316656] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__struct.hpp\n'}
+[44.317353] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__type_support.hpp\n'}
+[44.317884] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__traits.hpp\n'}
+[44.318661] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__builder.hpp\n'}
+[44.319306] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__type_support.hpp\n'}
+[44.319887] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__traits.hpp\n'}
+[44.320476] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__type_support.hpp\n'}
+[44.321053] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.hpp\n'}
+[44.321642] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__struct.hpp\n'}
+[44.322245] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_msg1.hpp\n'}
+[44.322968] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_user_param.hpp\n'}
+[44.323548] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_motor_ticks_and_velo.hpp\n'}
+[44.325365] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/pose.hpp\n'}
+[44.325864] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_slow_start_stop.hpp\n'}
+[44.326278] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_msg2.hpp\n'}
+[44.326665] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/pos_vel_timestamped.hpp\n'}
+[44.326955] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[44.327648] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces\n'}
+[44.328103] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg\n'}
+[44.328429] (md_interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail\n'}
+[44.328890] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[44.329175] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__type_support.cpp\n'}
+[44.329619] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__rosidl_typesupport_introspection_cpp.hpp\n'}
+[44.330089] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__type_support.cpp\n'}
+[44.330810] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.cpp\n'}
+[44.331603] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__type_support.cpp\n'}
+[44.332220] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__type_support.cpp\n'}
+[44.332863] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__rosidl_typesupport_introspection_cpp.hpp\n'}
+[44.333487] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__rosidl_typesupport_introspection_cpp.hpp\n'}
+[44.334066] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__rosidl_typesupport_introspection_cpp.hpp\n'}
+[44.334409] (-) TimerEvent: {}
+[44.335333] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.cpp\n'}
+[44.335994] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__type_support.cpp\n'}
+[44.336418] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__rosidl_typesupport_introspection_cpp.hpp\n'}
+[44.336801] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__rosidl_typesupport_introspection_cpp.hpp\n'}
+[44.337772] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[44.341745] (md_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[44.342233] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_cpp.so\n'}
+[44.344759] (md_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[44.345194] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/pythonpath.sh\n'}
+[44.345692] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/pythonpath.dsv\n'}
+[44.347050] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/__init__.py\n'}
+[44.434671] (-) TimerEvent: {}
+[44.466383] (md_interfaces) StdoutLine: {'line': b"Compiling '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/__init__.py'...\n"}
+[44.481308] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg\n'}
+[44.482375] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_user_param_s.c\n'}
+[44.483133] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_pos_vel_timestamped_s.c\n'}
+[44.483817] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_msg2_s.c\n'}
+[44.484604] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_msg1.py\n'}
+[44.485413] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_msg2.py\n'}
+[44.486224] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_msg1_s.c\n'}
+[44.486973] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/__init__.py\n'}
+[44.487609] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_pos_vel_timestamped.py\n'}
+[44.488436] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_motor_ticks_and_velo.py\n'}
+[44.489470] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_pose_s.c\n'}
+[44.490346] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_slow_start_stop_s.c\n'}
+[44.491147] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_slow_start_stop.py\n'}
+[44.491807] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_motor_ticks_and_velo_s.c\n'}
+[44.492475] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_pose.py\n'}
+[44.493236] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_user_param.py\n'}
+[44.494928] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/md_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[44.497957] (md_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/md_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" to ""\n'}
+[44.498900] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/md_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[44.501879] (md_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/md_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so" to ""\n'}
+[44.502765] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/md_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[44.505529] (md_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/md_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" to ""\n'}
+[44.506093] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__python.so\n'}
+[44.509854] (md_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__python.so" to ""\n'}
+[44.510873] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/Pose.idl\n'}
+[44.511442] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotMsg1.idl\n'}
+[44.512009] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotMsg2.idl\n'}
+[44.512822] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/PosVelTimestamped.idl\n'}
+[44.513780] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotSlowStartStop.idl\n'}
+[44.514693] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotUserParam.idl\n'}
+[44.515591] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdMotorTicksAndVelo.idl\n'}
+[44.516396] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/Pose.msg\n'}
+[44.517288] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotMsg1.msg\n'}
+[44.518071] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotMsg2.msg\n'}
+[44.519047] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/PosVelTimestamped.msg\n'}
+[44.519896] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotSlowStartStop.msg\n'}
+[44.520762] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotUserParam.msg\n'}
+[44.521548] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdMotorTicksAndVelo.msg\n'}
+[44.522826] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/ament_index/resource_index/package_run_dependencies/md_interfaces\n'}
+[44.523997] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/ament_index/resource_index/parent_prefix_path/md_interfaces\n'}
+[44.526742] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/ament_prefix_path.sh\n'}
+[44.527558] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/ament_prefix_path.dsv\n'}
+[44.528422] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/path.sh\n'}
+[44.529343] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/path.dsv\n'}
+[44.530325] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/local_setup.bash\n'}
+[44.531208] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/local_setup.sh\n'}
+[44.532016] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/local_setup.zsh\n'}
+[44.532923] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/local_setup.dsv\n'}
+[44.533740] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/package.dsv\n'}
+[44.534862] (-) TimerEvent: {}
+[44.535938] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/ament_index/resource_index/packages/md_interfaces\n'}
+[44.536526] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_generator_cExport.cmake\n'}
+[44.537316] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[44.538288] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[44.539356] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[44.540658] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[44.541682] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[44.542841] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_generator_cppExport.cmake\n'}
+[44.543900] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[44.544807] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[44.545837] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[44.546911] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[44.547822] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[44.548730] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[44.549626] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[44.550574] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[44.551504] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[44.552399] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[44.553304] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[44.554213] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfacesConfig.cmake\n'}
+[44.554997] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfacesConfig-version.cmake\n'}
+[44.555890] (md_interfaces) StdoutLine: {'line': b'-- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/package.xml\n'}
+[44.575062] (md_interfaces) CommandEnded: {'returncode': 0}
+[44.635972] (-) TimerEvent: {}
+[44.677146] (md_interfaces) JobEnded: {'identifier': 'md_interfaces', 'rc': 0}
+[44.680575] (-) EventReactorShutdown: {}

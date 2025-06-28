@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/md_interfaces__cpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_motor_ticks_and_velo__builder.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_motor_ticks_and_velo__struct.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_motor_ticks_and_velo__traits.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_msg1__builder.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_msg1__struct.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_msg1__traits.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_msg1__type_support.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_msg2__builder.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_msg2__struct.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_msg2__traits.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_msg2__type_support.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_slow_start_stop__builder.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_slow_start_stop__struct.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_slow_start_stop__traits.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_user_param__builder.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_user_param__struct.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_user_param__traits.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/md_robot_user_param__type_support.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/pos_vel_timestamped__builder.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/pos_vel_timestamped__struct.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/pos_vel_timestamped__traits.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/pos_vel_timestamped__type_support.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/pose__builder.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/pose__struct.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/pose__traits.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/detail/pose__type_support.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/md_motor_ticks_and_velo.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/md_robot_msg1.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/md_robot_msg2.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/md_robot_slow_start_stop.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/md_robot_user_param.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/pos_vel_timestamped.hpp"
+  "rosidl_generator_cpp/md_interfaces/msg/pose.hpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang )
+  include(CMakeFiles/md_interfaces__cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

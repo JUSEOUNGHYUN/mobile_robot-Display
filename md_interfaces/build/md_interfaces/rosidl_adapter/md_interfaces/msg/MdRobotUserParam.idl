@@ -1,0 +1,38 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from md_interfaces/msg/MdRobotUserParam.msg
+// generated code does not contain a copyright notice
+
+#include "md_interfaces/msg/MdRobotSlowStartStop.idl"
+
+module md_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "## Message for Managing Robot Configuration Parameters for robot users")
+    struct MdRobotUserParam {
+      @verbatim (language="comment", text=
+        " Notifies that which parameters has to be over-written")
+      uint16 param_bit_select;
+
+      @verbatim (language="comment", text=
+        "#1:" "\n"
+        " Slow start and slow down" "\n"
+        " Acceleration and Deceleration parameter" "\n"
+        " Range 0 ~ 1023 / 0 = no change / 1023 = takes about 15s at 0 to 300 RPM or 300 RPM to 0" "\n"
+        " You can set slowstart and slowdown param seperately")
+      md_interfaces::msg::MdRobotSlowStartStop slow_sd;
+
+      @verbatim (language="comment", text=
+        "#2:" "\n"
+        " Robot Max speed" "\n"
+        " User defined Robot maximum speed")
+      double max_linear_speed_usr;
+
+      double max_angular_speed_usr;
+
+      @verbatim (language="comment", text=
+        "#3:" "\n"
+        " Select brake type")
+      uint8 brake_type;
+    };
+  };
+};

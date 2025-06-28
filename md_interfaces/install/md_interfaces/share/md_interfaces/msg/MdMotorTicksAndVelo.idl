@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from md_interfaces/msg/MdMotorTicksAndVelo.msg
+// generated code does not contain a copyright notice
+
+
+module md_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "##This message is used for transfer motor position(ticks) and velocity(rpm) information" "\n"
+      "Left motor position")
+    struct MdMotorTicksAndVelo {
+      int32 left_ticks;
+
+      @verbatim (language="comment", text=
+        "Left motor velocity")
+      int16 left_rpm;
+
+      @verbatim (language="comment", text=
+        "Right motor position")
+      int32 right_ticks;
+
+      @verbatim (language="comment", text=
+        "Right motor velocity")
+      int16 right_rpm;
+    };
+  };
+};

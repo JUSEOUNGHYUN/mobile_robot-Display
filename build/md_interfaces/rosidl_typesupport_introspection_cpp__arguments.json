@@ -1,0 +1,37 @@
+{
+  "package_name": "md_interfaces",
+  "output_dir": "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_typesupport_introspection_cpp/md_interfaces",
+  "template_dir": "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource",
+  "idl_tuples": [
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces:msg/Pose.idl",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces:msg/MdRobotMsg1.idl",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces:msg/MdRobotMsg2.idl",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces:msg/PosVelTimestamped.idl",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces:msg/MdRobotSlowStartStop.idl",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces:msg/MdRobotUserParam.idl",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces:msg/MdMotorTicksAndVelo.idl"
+  ],
+  "ros_interface_dependencies": [
+    "builtin_interfaces:/opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl",
+    "builtin_interfaces:/opt/ros/foxy/share/builtin_interfaces/msg/Time.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/foxy/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp",
+    "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_typesupport_introspection_cpp/__init__.py",
+    "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/idl__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/idl__type_support.cpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/msg__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces/msg/Pose.idl",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces/msg/MdRobotMsg1.idl",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces/msg/MdRobotMsg2.idl",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces/msg/PosVelTimestamped.idl",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces/msg/MdRobotSlowStartStop.idl",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces/msg/MdRobotUserParam.idl",
+    "/home/dentium/Desktop/work/Projects/TFRobot/build/md_interfaces/rosidl_adapter/md_interfaces/msg/MdMotorTicksAndVelo.idl",
+    "/opt/ros/foxy/share/builtin_interfaces/msg/Duration.idl",
+    "/opt/ros/foxy/share/builtin_interfaces/msg/Time.idl"
+  ]
+}

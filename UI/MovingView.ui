@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MovingView</class>
+ <widget class="QWidget" name="MovingView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dentium</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: black;</string>
+  </property>
+  <layout class="QVBoxLayout" name="main_layout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="status_bar_container" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>50</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="content_container" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: white;</string>
+     </property>
+     <widget class="QLabel" name="name_label">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>20</y>
+        <width>332</width>
+        <height>116</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans KR Black</family>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: black;
+    font-size: 80px;
+    font-weight: 600;
+    font-family: &quot;Noto Sans KR Black&quot;;
+    background-color: transparent;
+}</string>
+      </property>
+      <property name="text">
+       <string>알 수 없음</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="moving_label">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>220</y>
+        <width>242</width>
+        <height>87</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans KR Black</family>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: black;
+    font-size: 60px;
+    font-weight: 600;
+    font-family: &quot;Noto Sans KR Black&quot;;
+    background-color: transparent;
+}</string>
+      </property>
+      <property name="text">
+       <string>이동 중...</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="info_label">
+      <property name="geometry">
+       <rect>
+        <x>232</x>
+        <y>437</y>
+        <width>559</width>
+        <height>58</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans KR Black</family>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+    font-family: &quot;Noto Sans KR Black&quot;;
+    background-color: transparent;
+}</string>
+      </property>
+      <property name="text">
+       <string>화면을 터치하면 일시정지 합니다.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

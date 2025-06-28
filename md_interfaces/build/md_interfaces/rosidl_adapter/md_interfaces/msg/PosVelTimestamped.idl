@@ -1,0 +1,34 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from md_interfaces/msg/PosVelTimestamped.msg
+// generated code does not contain a copyright notice
+
+#include "builtin_interfaces/msg/Time.idl"
+
+module md_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "## This msg only used for slow start and slow down data logging purpose" "\n"
+      "## Not used anymore" "\n"
+      "" "\n"
+      " Right motor ticks")
+    struct PosVelTimestamped {
+      int32 motor_pos1;
+
+      @verbatim (language="comment", text=
+        " Right motor velocity")
+      int16 motor_vel1;
+
+      @verbatim (language="comment", text=
+        " Left motor ticks")
+      int32 motor_pos2;
+
+      @verbatim (language="comment", text=
+        " Left motor ticks")
+      int32 motor_vel2;
+
+      @verbatim (language="comment", text=
+        " The time stamp when motor data recived from Motor driver via serial comm")
+      builtin_interfaces::msg::Time stamp;
+    };
+  };
+};

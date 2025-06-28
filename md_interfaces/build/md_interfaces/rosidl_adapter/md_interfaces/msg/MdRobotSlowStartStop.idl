@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from md_interfaces/msg/MdRobotSlowStartStop.msg
+// generated code does not contain a copyright notice
+
+
+module md_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "## This message is used for setting acceleration and decceleration of the motors" "\n"
+      "## The range of value is" "\n"
+      " if value = 0, acc/decc time is about 0.1 s" "\n"
+      " if value = 1023 acc/decc time is about 15 s")
+    struct MdRobotSlowStartStop {
+      @verbatim (language="comment", text=
+        " Acceleration of both motors")
+      uint16 slowstart;
+
+      @verbatim (language="comment", text=
+        " Deceleration of both motors")
+      uint16 slowstop;
+    };
+  };
+};

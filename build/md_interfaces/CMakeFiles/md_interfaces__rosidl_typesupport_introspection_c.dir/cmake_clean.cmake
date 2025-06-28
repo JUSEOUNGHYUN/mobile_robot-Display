@@ -1,0 +1,30 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.c.o"
+  "CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_msg1__type_support.c.o"
+  "CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_msg2__type_support.c.o"
+  "CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.c.o"
+  "CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_user_param__type_support.c.o"
+  "CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/pos_vel_timestamped__type_support.c.o"
+  "CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/pose__type_support.c.o"
+  "libmd_interfaces__rosidl_typesupport_introspection_c.pdb"
+  "libmd_interfaces__rosidl_typesupport_introspection_c.so"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_motor_ticks_and_velo__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.c"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_msg1__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_msg1__type_support.c"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_msg2__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_msg2__type_support.c"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_slow_start_stop__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.c"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_user_param__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_user_param__type_support.c"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/pos_vel_timestamped__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/pos_vel_timestamped__type_support.c"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/pose__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/md_interfaces/msg/detail/pose__type_support.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MoveOptionView</class>
+ <widget class="QWidget" name="MoveOptionView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dentium</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #141414;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="status_bar_placeholder" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>60</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="styleSheet">
+      <string notr="true">QScrollArea {
+    background-color: #141414;
+    border: none;
+}
+QScrollBar:vertical {
+    background-color: #222222;
+    width: 10px;
+    margin: 0px;
+}
+QScrollBar::handle:vertical {
+    background-color: #666666;
+    min-height: 20px;
+    border-radius: 5px;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="verticalScrollBarPolicy">
+      <enum>Qt::ScrollBarAsNeeded</enum>
+     </property>
+     <property name="horizontalScrollBarPolicy">
+      <enum>Qt::ScrollBarAlwaysOff</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-260</y>
+        <width>1014</width>
+        <height>1200</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>1200</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #FFFFFF;</string>
+      </property>
+      <widget class="QLabel" name="title_label">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>0</y>
+         <width>286</width>
+         <height>70</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>이동 옵션 설정</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="subtitle_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>281</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>이동 중 다른 호출벨 응답 설정</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="robot_velo_set_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>200</y>
+         <width>142</width>
+         <height>35</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>로봇 속도 설정</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="linear_speed_usr_textEdit">
+       <property name="geometry">
+        <rect>
+         <x>860</x>
+         <y>390</y>
+         <width>151</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTextEdit {
+    background-color: transparent;
+	border: None;
+    color: black;
+    font-size: 10px;
+	font-family: &quot;Noto Sans KR Black&quot;;
+}</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans KR Black'; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="accel_rate_label_6">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>400</y>
+         <width>41</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>0.1</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QSlider" name="linear_speed_usr_Slider">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>400</y>
+         <width>501</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+    background: #eeeeee;
+    height: 10px;              /* 트랙은 얇게 유지 */
+    border-radius: 5px;
+}
+
+QSlider::sub-page:horizontal {
+    background: #3a86ff;
+    border-radius: 5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #eeeeee;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    background: #3a86ff;
+    border: none;
+    width: 32px;               /* 가로 크기 */
+    height: 32px;              /* 세로 크기 증가 */
+    margin: -11px 0px;         /* 위아래 margin 음수 → 트랙 중앙 정렬 */
+    border-radius: 16px;       /* 완전한 원형 */
+}
+</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="accel_rate_label_7">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>400</y>
+         <width>51</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>1.57</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="decel_rate_label_2">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>400</y>
+         <width>151</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>직진  속도(m/s)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="angular_speed_usr_textEdit">
+       <property name="geometry">
+        <rect>
+         <x>860</x>
+         <y>460</y>
+         <width>151</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTextEdit {
+    background-color: transparent;
+	border: None;
+    color: black;
+    font-size: 10px;
+	font-family: &quot;Noto Sans KR Black&quot;;
+}</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans KR Black'; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QSlider" name="angular_speed_usr_Slider">
+       <property name="geometry">
+        <rect>
+         <x>280</x>
+         <y>470</y>
+         <width>491</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+    background: #eeeeee;
+    height: 10px;              /* 트랙은 얇게 유지 */
+    border-radius: 5px;
+}
+
+QSlider::sub-page:horizontal {
+    background: #3a86ff;
+    border-radius: 5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #eeeeee;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    background: #3a86ff;
+    border: none;
+    width: 32px;               /* 가로 크기 */
+    height: 32px;              /* 세로 크기 증가 */
+    margin: -11px 0px;         /* 위아래 margin 음수 → 트랙 중앙 정렬 */
+    border-radius: 16px;       /* 완전한 원형 */
+}
+</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="accel_rate_label_8">
+       <property name="geometry">
+        <rect>
+         <x>790</x>
+         <y>470</y>
+         <width>51</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>7.85</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="decel_rate_label_3">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>470</y>
+         <width>161</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>회전 속도(rad/s)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="accel_rate_label_9">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>470</y>
+         <width>41</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>0.5</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="accel_rate_label_2">
+       <property name="geometry">
+        <rect>
+         <x>190</x>
+         <y>260</y>
+         <width>51</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>0.11</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QSlider" name="accel_rate_Slider">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>260</y>
+         <width>401</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+    background: #eeeeee;
+    height: 10px;              /* 트랙은 얇게 유지 */
+    border-radius: 5px;
+}
+
+QSlider::sub-page:horizontal {
+    background: #3a86ff;
+    border-radius: 5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #eeeeee;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    background: #3a86ff;
+    border: none;
+    width: 32px;               /* 가로 크기 */
+    height: 32px;              /* 세로 크기 증가 */
+    margin: -11px 0px;         /* 위아래 margin 음수 → 트랙 중앙 정렬 */
+    border-radius: 16px;       /* 완전한 원형 */
+}
+</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="accel_rate_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>260</y>
+         <width>131</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>가속도(ms²)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="accel_rate_textEdit">
+       <property name="geometry">
+        <rect>
+         <x>860</x>
+         <y>250</y>
+         <width>151</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTextEdit {
+    background-color: transparent;
+	border: None;
+    color: black;
+    font-size: 10px;
+	font-family: &quot;Noto Sans KR Black&quot;;
+}</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans KR Black'; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="accel_rate_label_3">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>260</y>
+         <width>52</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>1.68</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="decel_rate_textEdit">
+       <property name="geometry">
+        <rect>
+         <x>860</x>
+         <y>320</y>
+         <width>151</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QTextEdit {
+    background-color: transparent;
+	border: None;
+    color: black;
+    font-size: 10px;
+	font-family: &quot;Noto Sans KR Black&quot;;
+}</string>
+       </property>
+       <property name="readOnly">
+        <bool>true</bool>
+       </property>
+       <property name="html">
+        <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Noto Sans KR Black'; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:22pt;&quot;&gt;0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="decel_rate_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>330</y>
+         <width>111</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>감속(ms²)</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="accel_rate_label_5">
+       <property name="geometry">
+        <rect>
+         <x>220</x>
+         <y>320</y>
+         <width>16</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QSlider" name="decel_rate_Slider">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>320</y>
+         <width>401</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QSlider::groove:horizontal {
+    background: #eeeeee;
+    height: 10px;              /* 트랙은 얇게 유지 */
+    border-radius: 5px;
+}
+
+QSlider::sub-page:horizontal {
+    background: #3a86ff;
+    border-radius: 5px;
+}
+
+QSlider::add-page:horizontal {
+    background: #eeeeee;
+    border-radius: 5px;
+}
+
+QSlider::handle:horizontal {
+    background: #3a86ff;
+    border: none;
+    width: 32px;               /* 가로 크기 */
+    height: 32px;              /* 세로 크기 증가 */
+    margin: -11px 0px;         /* 위아래 margin 음수 → 트랙 중앙 정렬 */
+    border-radius: 16px;       /* 완전한 원형 */
+}
+</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="accel_rate_label_4">
+       <property name="geometry">
+        <rect>
+         <x>660</x>
+         <y>320</y>
+         <width>52</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>1023</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="option_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>120</y>
+         <width>91</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>설정 옵션</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="callbell_option_checkBox">
+       <property name="geometry">
+        <rect>
+         <x>120</x>
+         <y>120</y>
+         <width>191</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QCheckBox {
+    spacing: 12px;                   /* 텍스트와 체크박스 간 간격 */
+	font-family: 'Noto Sans KR Black';
+    font-size: 20px;                 /* 글씨 크기 */
+    font-weight: bold;              /* 글씨 굵기 (헤더 느낌) */
+    color: #1A1A1A;                 /* 진한 텍스트 색 */
+    padding: 10px 4px;              /* 여백 추가 (시각적으로 더 큼직하게) */
+}
+
+QCheckBox::indicator {
+    width: 32px;                    /* 체크 아이콘 가로 크기 */
+    height: 32px;                   /* 체크 아이콘 세로 크기 */
+}
+
+/* 체크 해제 상태 */
+QCheckBox::indicator:unchecked {
+    image: url(:/file/CheckBox/uncheck.png);
+}
+
+/* 체크된 상태 */
+QCheckBox::indicator:checked {
+    image: url(:/file/CheckBox/checked.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string>다른 호출벨 무시</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="save_button">
+       <property name="geometry">
+        <rect>
+         <x>410</x>
+         <y>600</y>
+         <width>200</width>
+         <height>50</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>200</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>200</width>
+         <height>50</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    background-color: #00A3FF;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 8px;
+    height: 50px;
+    border: none;
+}
+QPushButton:hover {
+    background-color: #33B5FF;
+}
+QPushButton:pressed {
+    background-color: #0080DD;
+}</string>
+       </property>
+       <property name="text">
+        <string>저장</string>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="callbell_option_checkBox_2">
+       <property name="geometry">
+        <rect>
+         <x>150</x>
+         <y>520</y>
+         <width>41</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QCheckBox {
+    spacing: 12px;                   /* 텍스트와 체크박스 간 간격 */
+	font-family: 'Noto Sans KR Black';
+    font-size: 20px;                 /* 글씨 크기 */
+    font-weight: bold;              /* 글씨 굵기 (헤더 느낌) */
+    color: #1A1A1A;                 /* 진한 텍스트 색 */
+    padding: 10px 4px;              /* 여백 추가 (시각적으로 더 큼직하게) */
+}
+
+QCheckBox::indicator {
+    width: 32px;                    /* 체크 아이콘 가로 크기 */
+    height: 32px;                   /* 체크 아이콘 세로 크기 */
+}
+
+/* 체크 해제 상태 */
+QCheckBox::indicator:unchecked {
+    image: url(:/file/CheckBox/uncheck.png);
+}
+
+/* 체크된 상태 */
+QCheckBox::indicator:checked {
+    image: url(:/file/CheckBox/checked.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="option_label_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>520</y>
+         <width>131</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>62</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR Black';
+    background: transparent;
+}</string>
+       </property>
+       <property name="text">
+        <string>브레이크 모드</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../resources/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,452 @@
+from PySide6.QtWidgets import QWidget, QLabel, QPushButton, QVBoxLayout, QHBoxLayout, QGridLayout, QGraphicsDropShadowEffect
+from PySide6.QtGui import QPixmap, QFont, QIcon, QColor
+from PySide6.QtCore import Qt, Signal, QTimer, QSize, QEvent
+from PySide6.QtUiTools import QUiLoader
+from views.StatusBar import StatusBar, StatusBarType
+from Utils.MessageBox import MessageBox
+from Utils.ButtonStyle import RoundButtonStyle
+import os
+
+# 버튼 디자인 클래스
+class LocationButton(QPushButton):
+    """위치 버튼 컴포넌트
+    
+    목적지 선택 화면에서 사용되는 위치 버튼 컴포넌트입니다.
+    """
+    
+    long_press_started = Signal(object)  # 롱프레스 시작 시그널 (버튼 객체 전달)
+    
+    def __init__(self, text, location_data=None, width=230, height=130):
+        """
+        Args:
+            text (str): 버튼에 표시할 텍스트
+            location_data (dict): 위치 데이터
+            width (int): 버튼 너비
+            height (int): 버튼 높이
+        """
+        super().__init__(text)
+        self.location_data = location_data
+        
+        # 버튼 스타일 적용
+        font_size = RoundButtonStyle.apply_font_by_size(self, width)
+        RoundButtonStyle.apply_round_style(self, width, height, font_size)
+        
+        # 선택 스타일 저장
+        self.normal_style = self.styleSheet()
+        self.selected_style = RoundButtonStyle.get_selected_style()
+        
+    # 버튼 선택 상태 설정 / selected (bool): 선택 여부
+    def set_selected(self, selected=True):
+        if selected:
+            self.setStyleSheet(self.selected_style)
+        else:
+            self.setStyleSheet(self.normal_style)
+    
+    # 위치 데이터 반환 / dict: 위치 데이터
+    def get_location_data(self):
+        return self.location_data
+
+class LocationSelectionView(QWidget):
+    # 시그널 정의
+    add_location_signal = Signal()  # 목적지 추가 시그널 (파라미터 없음)
+    edit_location_signal = Signal(dict)  # 목적지 수정 시그널
+    start_moving_signal = Signal(dict)   # 출발 시그널
+    delete_location_signal = Signal(dict)  # 삭제 시그널 추가
+    location_selected_signal = Signal(dict)  # 위치 선택 시그널 추가
+    confirm_delete_signal = Signal(dict)  # 삭제 확인 시그널 추가
+    change_layout_signal = Signal()  # 레이아웃 변경 시그널 추가
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        
+        # UI 파일 로드
+        loader = QUiLoader()
+        ui_file_path = os.path.join(os.path.dirname(__file__), "..", "UI", "LocationSelectionView.ui")
+        self.ui = loader.load(ui_file_path)
+        
+        # 메인 레이아웃 설정
+        layout = QVBoxLayout(self)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(0)
+        
+        # 상태바 추가
+        self.status_bar = StatusBar(self, StatusBarType.FULL)
+        layout.addWidget(self.status_bar)
+        
+        # UI 파일에서 로드한 위젯 추가
+        layout.addWidget(self.ui)
+        
+        # UI 요소 연결
+        self.title_label = self.ui.findChild(QLabel, "title_label")
+        self.grid_layout = self.ui.findChild(QGridLayout, "grid_layout")
+        self.delete_button = self.ui.findChild(QPushButton, "delete_button")
+        self.start_button = self.ui.findChild(QPushButton, "start_button")
+        self.change_layout_button = self.ui.findChild(QPushButton, "change_layout_button")
+        
+        # 버튼들에 스타일 적용
+        # 목적지 삭제 버튼에 스타일 적용
+        RoundButtonStyle.apply_icon_button_style(
+            self.delete_button, 
+            width=100, 
+            height=100, 
+            icon_path=":/file/RegistSelect/delete_destination.png",
+            icon_size=80
+        )
+        
+        # 목적지 출발 버튼에 스타일 적용
+        RoundButtonStyle.apply_icon_button_style(
+            self.start_button, 
+            width=100, 
+            height=100, 
+            icon_path=":/file/RegistSelect/start_destination.png",
+            icon_size=80
+        )
+        
+        
+        # 레이아웃 변경 버튼에 스타일 적용
+        RoundButtonStyle.apply_icon_button_style(
+            self.change_layout_button, 
+            width=80, 
+            height=80, 
+            icon_path=":/file/RegistSelect/button_layout.png",
+            icon_size=60
+        )
+        
+        # 버튼 시그널 연결
+        self.delete_button.clicked.connect(self.on_delete_button_clicked)
+        self.delete_button.pressed.connect(self.on_delete_button_clicked)  # 터치스크린용 이벤트 추가
+        self.start_button.clicked.connect(self.on_start_button_clicked)
+        self.start_button.pressed.connect(self.on_start_button_clicked)  # 터치스크린용 이벤트 추가
+        self.change_layout_button.clicked.connect(self.on_change_layout_button_clicked)
+        
+        # 🔹 1. 플러스 버튼을 담을 컨테이너 생성
+        self.plus_button_container = QWidget()
+        self.plus_button_container.setFixedSize(70, 70)  # 컨테이너 크기는 버튼보다 약간 크게
+        
+        # 컨테이너 스타일시트 적용 - 둥근 모서리 추가
+        self.plus_button_container.setStyleSheet("""
+            QWidget {
+                border-radius: 35px;
+                background-color: transparent;
+            }
+        """)
+        
+        # 컨테이너 레이아웃 설정
+        container_layout = QVBoxLayout(self.plus_button_container)
+        container_layout.setContentsMargins(5, 5, 5, 5)  # 여백 설정
+        container_layout.setAlignment(Qt.AlignCenter)
+        
+        # 버튼 생성 및 이미지 설정
+        self.plus_button = QPushButton()
+        self.plus_button.setIcon(QIcon(":/file/RegistSelect/add_destination.png"))
+        self.plus_button.setIconSize(QSize(120, 120))
+        self.plus_button.setFixedSize(60, 60)
+        
+        # 버튼 스타일시트 적용
+        self.plus_button.setStyleSheet("""
+            QPushButton {
+                background-color: #FFFFFF;
+                border-radius: 30px;
+                padding: 5px;
+            }
+            QPushButton:hover {
+                background-color: #E0E0E0;
+            }
+        """)
+        
+        # 컨테이너에 버튼 추가
+        container_layout.addWidget(self.plus_button)
+        
+        # 그림자 효과를 컨테이너에 적용
+        shadow = QGraphicsDropShadowEffect(self.plus_button_container)
+        shadow.setBlurRadius(15)  # 블러 반경 설정
+        shadow.setColor(QColor(0, 0, 0, 80))  # 그림자 색상 및 투명도
+        shadow.setOffset(3, 3)  # 그림자 오프셋
+        self.plus_button_container.setGraphicsEffect(shadow)
+
+        # plus_button의 이벤트 처리 방식 변경
+        # 클릭 이벤트만 연결하고 pressed는 제거
+        self.plus_button.clicked.connect(self.on_plus_button_clicked)
+        
+        # 드래그 감지를 위한 변수 추가
+        self.plus_button_pressed = False
+        self.plus_button_drag_started = False
+        
+        # 이벤트 필터 설치
+        self.plus_button.installEventFilter(self)
+        
+        # 버튼 딕셔너리 (버튼과 데이터 매핑)
+        self.location_buttons = {}
+        self.location_buttons[self.plus_button] = None
+        
+        # 롱프레스 타이머 설정
+        self.long_press_timer = QTimer()
+        self.long_press_timer.setInterval(900)  # 0.9초 대기
+        self.long_press_timer.setSingleShot(True)
+        self.long_press_timer.timeout.connect(self.on_long_press)
+        
+        # 선택 상태 초기화
+        self.selected_location = None
+        self.current_button = None
+        self.ignore_next_click = False
+        # 빈 공간 클릭 이벤트 처리를 위한 이벤트 필터 설치
+        self.ui.installEventFilter(self)
+
+    def update_locations(self, locations):
+        """위치 목록 업데이트"""
+        self.locations = locations or []
+        self.setup_location_buttons()
+
+        # 선택된 위치 및 버튼 상태 초기화
+        self.selected_location = None
+        self.delete_button.setEnabled(False)
+        self.start_button.setEnabled(False)
+
+        # 타이틀 업데이트
+        if not self.locations:
+            self.title_label.setText("Register Destination")
+        else:
+            self.title_label.setText("Select Destination")
+
+    def setup_location_buttons(self):
+        # 기존 버튼 제거
+        for button in self.location_buttons.keys():
+            if button != self.plus_button:  # + 버튼은 유지
+                self.grid_layout.removeWidget(button)
+                button.deleteLater()
+
+        self.location_buttons = {}
+        self.location_buttons[self.plus_button] = None
+
+        # 목적지 개수에 따라 그리드 설정 (유동적 레이아웃)
+        total_locations = len(self.locations)
+        
+        # 그리드 크기 계산 (+ 버튼을 위한 공간 확보)
+        if total_locations <= 3:
+            max_cols = total_locations + 1  # +버튼을 위한 공간 추가
+            max_rows = 1
+        elif total_locations <= 7:
+            max_cols = 4
+            max_rows = 2
+        else:
+            # 7개 초과 시 열 수를 조절하여 3행 이상으로 표시
+            max_cols = 4
+            max_rows = (total_locations + 4) // 4  # 올림 나눗셈 (+버튼 공간 포함)
+            
+        print(f"레이아웃 설정: {max_rows}행 x {max_cols}열, 총 {total_locations}개 목적지 + 추가버튼")
+
+        # 버튼 크기를 목적지 개수에 따라 조절
+        if total_locations <= 3:
+            # 목적지가 적을 때 큰 버튼
+            button_width = 230
+            button_height = 180
+        elif total_locations <= 7:
+            # 목적지가 중간 정도일 때 중간 크기 버튼
+            button_width = 200
+            button_height = 150
+        else:
+            # 목적지가 많을 때 작은 버튼
+            button_width = 180
+            button_height = 120
+        
+        # +버튼 크기 및 폰트 크기 업데이트
+        self.plus_button.setFixedSize(button_width, button_height)
+        self.plus_button_container.setFixedSize(button_width + 10, button_height + 10)
+        
+        # 플러스 버튼에 스타일 적용
+        RoundButtonStyle.apply_round_style(self.plus_button, button_width, button_height, 45)
+        
+        # 컨테이너 스타일시트 업데이트 - 고정 둥근 모서리 적용
+        self.plus_button_container.setStyleSheet("""
+            QWidget {
+                border-radius: 30px;
+                background-color: transparent;
+            }
+        """)
+        
+        # 그림자 효과를 컨테이너에 적용
+        shadow = QGraphicsDropShadowEffect(self.plus_button_container)
+        shadow.setBlurRadius(15)  # 블러 반경 설정
+        shadow.setColor(QColor(0, 0, 0, 80))  # 그림자 색상 및 투명도
+        shadow.setOffset(3, 3)  # 그림자 오프셋
+        self.plus_button_container.setGraphicsEffect(shadow)
+
+        # 목적지 버튼 생성 및 배치
+        for i, location in enumerate(self.locations):
+            # 위치 계산
+            row = i // max_cols
+            col = i % max_cols
+
+            # 버튼 텍스트 설정
+            if isinstance(location, dict) and 'name' in location:
+                button_text = location['name']
+            else:
+                button_text = str(location)
+
+            # 버튼 생성 - 개수에 따른 크기로 설정
+            button = LocationButton(button_text, location, button_width, button_height)
+
+            # 버튼에 이벤트 연결
+            button.clicked.connect(lambda checked=False, loc=location: self.on_button_clicked(loc))
+            button.pressed.connect(lambda b=button, loc=location: self.on_button_pressed(b, loc))
+            button.released.connect(self.on_button_released)
+
+            # 버튼과 데이터 매핑
+            self.location_buttons[button] = location
+
+            # 그리드에 추가
+            self.grid_layout.addWidget(button, row, col)
+
+        # + 버튼 위치 계산
+        plus_button_pos = len(self.locations)
+        
+        plus_row = plus_button_pos // max_cols
+        plus_col = plus_button_pos % max_cols
+
+        # + 버튼을 마지막 위치에 배치 (컨테이너 위젯을 추가)
+        self.grid_layout.addWidget(self.plus_button_container, plus_row, plus_col)
+
+    def on_button_pressed(self, button, location):
+        self.current_button = button
+        self.ignore_next_click = False   # 클릭 무시 플래그 초기화
+        # 빈 공간 클릭 이벤트 처리를 위한 이벤트 필터 설치
+        self.ui.installEventFilter(self)
+        self.long_press_timer.start()
+
+    def on_button_released(self):
+        if self.long_press_timer.isActive():
+            self.long_press_timer.stop()
+
+    def on_long_press(self):
+        self.ignore_next_click = True   # 다음 클릭 무시 플래그 설정
+        if self.current_button and self.current_button != self.plus_button:
+            location = self.location_buttons.get(self.current_button)
+            if location:
+                self.edit_location_signal.emit(location)
+
+    def on_button_clicked(self, location):
+        # 롱프레스 후에는 클릭 이벤트 무시
+        if self.ignore_next_click:
+            self.ignore_next_click = False
+            return
+        # 빈 공간 클릭 이벤트 처리를 위한 이벤트 필터 설치
+        self.ui.installEventFilter(self)
+
+        self.selected_location = location
+        self.location_selected_signal.emit(location)
+
+        # 목적지 선택 라벨을 목적지 이름으로 변경
+        if isinstance(location, dict) and 'name' in location:
+            self.title_label.setText(location['name'])
+        else:
+            self.title_label.setText(str(location))
+
+        # 기존에 선택된 버튼들의 스타일 초기화
+        for button, loc in self.location_buttons.items():
+            if button != self.plus_button:  # + 버튼은 제외
+                button.set_selected(False)
+
+        # 현재 선택된 버튼의 스타일 변경
+        for button, loc in self.location_buttons.items():
+            if loc == location:
+                button.set_selected(True)
+                break
+
+        # 출발 버튼과 삭제 버튼 활성화
+        self.start_button.setEnabled(True)
+        self.delete_button.setEnabled(True)
+
+    def on_start_button_clicked(self):
+        if self.selected_location:
+            self.start_moving_signal.emit(self.selected_location)
+
+    def on_delete_button_clicked(self):
+        if self.selected_location:
+            location_name = self.selected_location.get('name', '선택된 목적지')
+
+            # 확인 대화상자 표시
+            result = MessageBox.show_message(
+                self,
+                title="삭제 확인",
+                message=f"'{location_name}'을(를) 삭제하시겠습니까?",
+                button_labels=["예", "아니오"]
+            )
+
+            # 예 버튼을 클릭한 경우
+            if result == MessageBox.YES:
+                self.confirm_delete()
+
+    def confirm_delete(self):
+        if self.selected_location:
+            self.delete_location_signal.emit(self.selected_location)
+            
+    def on_change_layout_button_clicked(self):
+        """레이아웃 변경 버튼 클릭 이벤트"""
+        self.change_layout_signal.emit()
+            
+    def clear_selection(self):
+        """선택 상태 초기화"""
+        # 선택 상태 초기화
+        self.selected_location = None
+        self.start_button.setEnabled(False)
+        self.delete_button.setEnabled(False)
+        
+        # 제목 라벨 초기화
+        if not self.locations:
+            self.title_label.setText("Register Destination")
+        else:
+            self.title_label.setText("Select Destination")
+            
+        # 모든 버튼 스타일 초기화
+        for button, loc in self.location_buttons.items():
+            if button != self.plus_button:  # + 버튼은 제외
+                button.set_selected(False)
+
+    def on_plus_button_clicked(self):
+        # 이벤트 필터 초기화 및 선택 상태 해제
+        self.clear_selection()
+        # 목적지 추가 시그널 발생
+        self.add_location_signal.emit()
+
+    def eventFilter(self, obj, event):
+        """이벤트 필터"""
+        if obj == self.ui and event.type() == QEvent.MouseButtonPress:
+            # 빈 공간 클릭 시 선택 해제
+            if event.button() == Qt.LeftButton:
+                print("빈 공간 클릭: 선택 해제")
+                self.clear_selection()
+                return True
+        
+        # plus_button 이벤트 처리
+        elif obj == self.plus_button:
+            if event.type() == QEvent.MouseButtonPress:
+                # 터치 시작 기록
+                self.plus_button_pressed = True
+                self.plus_button_drag_started = False
+                print("플러스 버튼 터치 시작")
+                return False  # 이벤트 계속 처리
+                
+            elif event.type() == QEvent.MouseMove and self.plus_button_pressed:
+                # 드래그 감지 (5픽셀 이상 이동 시)
+                if not self.plus_button_drag_started:
+                    delta = event.pos() - event.buttonDownPos(Qt.LeftButton)
+                    if delta.manhattanLength() > 5:
+                        self.plus_button_drag_started = True
+                        print("플러스 버튼 드래그 시작")
+                return False  # 이벤트 계속 처리
+                
+            elif event.type() == QEvent.MouseButtonRelease:
+                # 터치 종료 처리
+                if self.plus_button_pressed:
+                    self.plus_button_pressed = False
+                    if self.plus_button_drag_started:
+                        # 드래그 후 터치 종료 - 클릭 이벤트 취소
+                        print("플러스 버튼 드래그 후 터치 종료 - 클릭 취소")
+                        self.plus_button_drag_started = False
+                        return True  # 이벤트 소비 (클릭 이벤트 방지)
+                    else:
+                        # 일반 터치 종료 - 클릭 이벤트 허용
+                        print("플러스 버튼 일반 터치 종료 - 클릭 허용")
+                        return False  # 이벤트 계속 처리 (클릭 이벤트 발생)
+        
+        return super().eventFilter(obj, event)

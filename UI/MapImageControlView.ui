@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MapImageControlView</class>
+ <widget class="QWidget" name="MapImageControlView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>610</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>맵 이미지 조정</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #FFFFFF;</string>
+  </property>
+  <widget class="QGraphicsView" name="map_view">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>991</width>
+     <height>581</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>300</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="save_btn">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>20</y>
+     <width>90</width>
+     <height>90</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>90</width>
+     <height>90</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #F0F0F0;
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 18px;
+	font-family: &quot;Noto Sans KR Black&quot;;
+    qproperty-icon: url(:/file/MapControl/save_map_control.png);
+    qproperty-iconSize: 65px 65px;
+}
+QPushButton:hover {
+    background-color: #E0E0E0;
+}
+QPushButton:pressed {
+    background-color: #E0E0E0;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancel_btn">
+   <property name="geometry">
+    <rect>
+     <x>910</x>
+     <y>20</y>
+     <width>90</width>
+     <height>90</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>90</width>
+     <height>90</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #F0F0F0;
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 18px;
+	font-family: &quot;Noto Sans KR Black&quot;;
+    qproperty-icon: url(:/file/MapControl/cancel_map_control.png);
+    qproperty-iconSize: 65px 65px;
+}
+QPushButton:hover {
+    background-color: #E0E0E0;
+}
+QPushButton:pressed {
+    background-color: #E0E0E0;
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QWidget" name="status_widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>410</y>
+     <width>181</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <widget class="QPushButton" name="move_up_btn">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>0</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #2A2A2A;
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 18px;
+}
+QPushButton:hover {
+    background-color: #3A3A3A;
+    border: 1px solid #666666;
+}
+QPushButton:pressed {
+    background-color: #333333;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="map_move_right_2">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>60</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #2A2A2A;
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 18px;
+}
+QPushButton:hover {
+    background-color: #3A3A3A;
+    border: 1px solid #666666;
+}
+QPushButton:pressed {
+    background-color: #333333;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="move_left_btn">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>60</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #2A2A2A;
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 18px;
+}
+QPushButton:hover {
+    background-color: #3A3A3A;
+    border: 1px solid #666666;
+}
+QPushButton:pressed {
+    background-color: #333333;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="move_down_btn">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>120</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #2A2A2A;
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 18px;
+}
+QPushButton:hover {
+    background-color: #3A3A3A;
+    border: 1px solid #666666;
+}
+QPushButton:pressed {
+    background-color: #333333;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="zoom_out_btn">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>0</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-image: url(:/file/Registration/Zoom_In.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(42, 42, 42, 180); /* 투명도 추가 */
+    border: 1px solid #444444;
+    border-radius: 6px;
+}
+QPushButton:hover {
+    background-color: rgba(58, 58, 58, 200); /* hover 시 투명도 */
+    border: 1px solid #666666;
+}
+QPushButton:pressed {
+    background-color: rgba(51, 51, 51, 220); /* 클릭 시 투명도 */
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="zoom_in_btn">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>120</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-image: url(:/file/Registration/Zoom_Out.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(42, 42, 42, 180); /* 투명도 추가 */
+    border: 1px solid #444444;
+    border-radius: 6px;
+}
+QPushButton:hover {
+    background-color: rgba(58, 58, 58, 200); /* hover 시 투명도 */
+    border: 1px solid #666666;
+}
+QPushButton:pressed {
+    background-color: rgba(51, 51, 51, 220); /* 클릭 시 투명도 */
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="refresh_image_control">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>60</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-image: url(:/file/MapControl/map_view_refresh_50.png);
+    background-repeat: no-repeat;
+    background-position: center;    
+	background-color: rgba(42, 42, 42, 180); 
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 18px;
+}
+QPushButton:hover {
+    background-color: #3A3A3A;
+    border: 1px solid #666666;
+}
+QPushButton:pressed {
+    background-color: #333333;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="rotate_right_btn">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-image: url(:/file/MarkerMove/marker_rotate_right_50.png);
+    background-repeat: no-repeat;
+    background-position: center;    
+	background-color: rgba(42, 42, 42, 180); 
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 18px;
+}
+QPushButton:hover {
+    background-color: #3A3A3A;
+    border: 1px solid #666666;
+}
+QPushButton:pressed {
+    background-color: #333333;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="rotate_left_btn">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>120</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	background-image: url(:/file/MarkerMove/marker_rotate_left_50.png);
+    background-repeat: no-repeat;
+    background-position: center;    
+	background-color: rgba(42, 42, 42, 180); 
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 18px;
+}
+QPushButton:hover {
+    background-color: #3A3A3A;
+    border: 1px solid #666666;
+}
+QPushButton:pressed {
+    background-color: #333333;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

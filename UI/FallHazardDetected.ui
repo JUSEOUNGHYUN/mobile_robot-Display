@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FallHazardDetected</class>
+ <widget class="QWidget" name="FallHazardDetected">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1029</width>
+    <height>603</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>낙하 위험 감지</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background-color: #black;
+}
+
+QPushButton {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16pt;
+    min-width: 200px;
+    min-height: 50px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+QLabel {
+    color: white;
+}</string>
+  </property>
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>20</y>
+     <width>371</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Noto Sans KR Black</family>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: black;
+	font-family: &quot;Noto Sans KR Black&quot;;
+    font-size: 60px;
+}</string>
+   </property>
+   <property name="text">
+    <string>낙하 위험 구간</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="distanceLabel">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>370</y>
+     <width>122</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #0088ff;</string>
+   </property>
+   <property name="text">
+    <string>전방 0.5m</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cancelButton">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>440</y>
+     <width>266</width>
+     <height>82</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #2A2A2A;
+    color: white;
+	font-family: &quot;Noto Sans KR Black&quot;;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    height: 45px;
+    border: 1px solid #444444;
+}
+
+QPushButton:hover {
+    background-color: #3A3A3A;
+    border: 1px solid #666666;
+}
+
+QPushButton:pressed {
+    background-color: #333333;
+}</string>
+   </property>
+   <property name="text">
+    <string>대기 장소</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="confirmButton">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>440</y>
+     <width>264</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #00A3FF;
+    color: white;
+	font-family: &quot;Noto Sans KR Black&quot;;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    height: 45px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #33B5FF;
+}
+
+QPushButton:pressed {
+    background-color: #0080DD;
+}</string>
+   </property>
+   <property name="text">
+    <string>목적지 선택 화면</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

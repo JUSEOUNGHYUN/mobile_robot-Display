@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from md_interfaces/msg/MdRobotMsg1.msg
+// generated code does not contain a copyright notice
+
+
+module md_interfaces {
+  module msg {
+    @verbatim (language="comment", text=
+      "## This message is Manufacturer made message type")
+    struct MdRobotMsg1 {
+      double interval_time;
+
+      int16 motor1_rpm;
+
+      int32 motor1_pos;
+
+      int16 motor2_rpm;
+
+      int32 motor2_pos;
+
+      uint8 motor1_state;
+
+      uint8 motor2_state;
+
+      float input_voltage;
+    };
+  };
+};

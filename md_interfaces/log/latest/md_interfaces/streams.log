@@ -1,0 +1,380 @@
+[0.059s] Invoking command in '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces -DCMAKE_INSTALL_PREFIX=/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces
+[0.486s] -- The C compiler identification is GNU 9.4.0
+[0.889s] -- The CXX compiler identification is GNU 9.4.0
+[0.920s] -- Check for working C compiler: /usr/bin/cc
+[1.427s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.436s] -- Detecting C compiler ABI info
+[1.859s] -- Detecting C compiler ABI info - done
+[1.937s] -- Detecting C compile features
+[1.938s] -- Detecting C compile features - done
+[1.954s] -- Check for working CXX compiler: /usr/bin/c++
+[2.420s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.429s] -- Detecting CXX compiler ABI info
+[2.875s] -- Detecting CXX compiler ABI info - done
+[2.943s] -- Detecting CXX compile features
+[2.946s] -- Detecting CXX compile features - done
+[2.963s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[3.087s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[3.087s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[4.118s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[4.135s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[4.170s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[4.680s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[4.801s] -- Found FastRTPS: /opt/ros/foxy/include  
+[5.155s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.277s] -- Found builtin_interfaces: 1.0.0 (/opt/ros/foxy/share/builtin_interfaces/cmake)
+[5.429s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[6.053s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[6.511s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.584s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[6.678s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[6.683s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[6.794s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[6.795s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[6.795s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[6.796s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+[6.884s] -- Found PythonExtra: .so  
+[7.122s] -- Configuring done
+[7.412s] -- Generating done
+[7.483s] -- Build files have been written to: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces
+[7.514s] Invoked command in '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces -DCMAKE_INSTALL_PREFIX=/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces
+[7.529s] Invoking command in '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces -- -j4 -l4
+[7.750s] [35m[1mScanning dependencies of target md_interfaces__cpp[0m
+[7.753s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[7.802s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[10.800s] [  2%] Built target md_interfaces__cpp
+[10.994s] [  3%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[10.997s] [  5%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[11.009s] [35m[1mScanning dependencies of target md_interfaces__rosidl_generator_c[0m
+[11.014s] [  6%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[11.121s] [  7%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/pose__functions.c.o[0m
+[11.450s] [  8%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/md_robot_msg1__functions.c.o[0m
+[11.730s] [ 10%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/md_robot_msg2__functions.c.o[0m
+[12.079s] [ 11%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/pos_vel_timestamped__functions.c.o[0m
+[12.517s] [ 12%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/md_robot_slow_start_stop__functions.c.o[0m
+[12.935s] [ 13%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/md_robot_user_param__functions.c.o[0m
+[13.281s] [ 15%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_generator_c.dir/rosidl_generator_c/md_interfaces/msg/detail/md_motor_ticks_and_velo__functions.c.o[0m
+[13.714s] [ 16%] [32m[1mLinking C shared library libmd_interfaces__rosidl_generator_c.so[0m
+[13.842s] [35m[1mScanning dependencies of target md_interfaces__rosidl_typesupport_cpp[0m
+[13.987s] [ 17%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/pose__type_support.cpp.o[0m
+[14.053s] [ 17%] Built target md_interfaces__rosidl_generator_c
+[14.070s] [35m[1mScanning dependencies of target md_interfaces__rosidl_typesupport_introspection_cpp[0m
+[14.120s] [ 18%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/md_robot_msg1__type_support.cpp.o[0m
+[14.214s] [ 20%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/pose__type_support.cpp.o[0m
+[14.810s] [35m[1mScanning dependencies of target md_interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[15.104s] [ 21%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/pose__type_support.cpp.o[0m
+[15.855s] [ 22%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/md_robot_msg2__type_support.cpp.o[0m
+[15.932s] [ 24%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[16.128s] [ 25%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/md_robot_msg1__type_support.cpp.o[0m
+[17.822s] [ 26%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/pos_vel_timestamped__type_support.cpp.o[0m
+[17.842s] [ 27%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/md_robot_msg1__type_support.cpp.o[0m
+[18.058s] [ 29%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/md_robot_msg2__type_support.cpp.o[0m
+[19.319s] [35m[1mScanning dependencies of target md_interfaces__rosidl_typesupport_introspection_c[0m
+[19.547s] [ 30%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/pose__type_support.c.o[0m
+[19.618s] [ 31%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/md_robot_slow_start_stop__type_support.cpp.o[0m
+[19.879s] [ 32%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_msg1__type_support.c.o[0m
+[19.967s] [ 34%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/pos_vel_timestamped__type_support.cpp.o[0m
+[20.310s] [ 35%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_msg2__type_support.c.o[0m
+[20.516s] [ 36%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/md_robot_msg2__type_support.cpp.o[0m
+[20.639s] [ 37%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/pos_vel_timestamped__type_support.c.o[0m
+[20.973s] [ 39%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.c.o[0m
+[21.274s] [ 40%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/md_robot_user_param__type_support.cpp.o[0m
+[21.326s] [ 41%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_robot_user_param__type_support.c.o[0m
+[21.583s] [ 43%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.cpp.o[0m
+[21.606s] [ 44%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.c.o[0m
+[21.987s] [ 45%] [32m[1mLinking C shared library libmd_interfaces__rosidl_typesupport_introspection_c.so[0m
+[22.259s] [ 45%] Built target md_interfaces__rosidl_typesupport_introspection_c
+[22.393s] [ 46%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[22.856s] [ 48%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/pos_vel_timestamped__type_support.cpp.o[0m
+[23.277s] [ 49%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/md_interfaces/msg/md_motor_ticks_and_velo__type_support.cpp.o[0m
+[23.606s] [ 50%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/md_robot_user_param__type_support.cpp.o[0m
+[25.073s] [ 51%] [32m[1mLinking CXX shared library libmd_interfaces__rosidl_typesupport_cpp.so[0m
+[25.220s] [35m[1mScanning dependencies of target md_interfaces__rosidl_typesupport_c[0m
+[25.308s] [ 53%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/pose__type_support.cpp.o[0m
+[25.419s] [ 54%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/md_robot_slow_start_stop__type_support.cpp.o[0m
+[25.515s] [ 55%] Built target md_interfaces__rosidl_typesupport_cpp
+[25.516s] [ 55%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.cpp.o[0m
+[25.542s] [ 56%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/md_robot_msg1__type_support.cpp.o[0m
+[25.622s] [ 58%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/md_robot_user_param__type_support.cpp.o[0m
+[25.831s] [ 59%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/md_robot_msg2__type_support.cpp.o[0m
+[26.207s] [ 60%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/pos_vel_timestamped__type_support.cpp.o[0m
+[26.458s] [ 62%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/md_robot_slow_start_stop__type_support.cpp.o[0m
+[26.693s] [ 63%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/md_robot_user_param__type_support.cpp.o[0m
+[27.049s] [ 64%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/md_interfaces/msg/md_motor_ticks_and_velo__type_support.cpp.o[0m
+[27.422s] [ 65%] [32m[1mLinking CXX shared library libmd_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[27.466s] [ 67%] [32m[1mLinking CXX shared library libmd_interfaces__rosidl_typesupport_c.so[0m
+[27.882s] [ 67%] Built target md_interfaces__rosidl_typesupport_introspection_cpp
+[27.931s] [ 67%] Built target md_interfaces__rosidl_typesupport_c
+[27.973s] [ 68%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/md_interfaces/msg/detail/dds_fastrtps/md_motor_ticks_and_velo__type_support.cpp.o[0m
+[30.004s] [ 69%] [32m[1mLinking CXX shared library libmd_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[30.391s] [ 69%] Built target md_interfaces__rosidl_typesupport_fastrtps_cpp
+[30.443s] [ 70%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[32.673s] [35m[1mScanning dependencies of target md_interfaces__rosidl_typesupport_fastrtps_c[0m
+[32.797s] [ 72%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/pose__type_support_c.cpp.o[0m
+[32.804s] [ 73%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/md_robot_msg1__type_support_c.cpp.o[0m
+[32.805s] [ 74%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/pos_vel_timestamped__type_support_c.cpp.o[0m
+[32.812s] [ 75%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/md_robot_msg2__type_support_c.cpp.o[0m
+[34.496s] [ 77%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support_c.cpp.o[0m
+[34.506s] [ 78%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/md_robot_user_param__type_support_c.cpp.o[0m
+[34.635s] [ 79%] [32mBuilding CXX object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support_c.cpp.o[0m
+[36.360s] [ 81%] [32m[1mLinking CXX shared library libmd_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[36.737s] [ 81%] Built target md_interfaces__rosidl_typesupport_fastrtps_c
+[36.785s] [35m[1mScanning dependencies of target md_interfaces[0m
+[36.836s] [ 81%] Built target md_interfaces
+[36.886s] [35m[1mScanning dependencies of target md_interfaces__py[0m
+[36.938s] [ 82%] [34m[1mGenerating Python code for ROS interfaces[0m
+[41.482s] [ 82%] Built target md_interfaces__py
+[41.530s] [35m[1mScanning dependencies of target md_interfaces__python[0m
+[41.725s] [ 83%] [32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_pose_s.c.o[0m
+[41.726s] [ 86%] [32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_md_robot_msg1_s.c.o[0m
+[41.726s] [ 84%] [32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_pos_vel_timestamped_s.c.o[0m
+[41.759s] [ 87%] [32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_md_robot_msg2_s.c.o[0m
+[42.282s] [ 88%] [32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_md_robot_slow_start_stop_s.c.o[0m
+[42.309s] [ 89%] [32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_md_robot_user_param_s.c.o[0m
+[42.327s] [ 91%] [32mBuilding C object CMakeFiles/md_interfaces__python.dir/rosidl_generator_py/md_interfaces/msg/_md_motor_ticks_and_velo_s.c.o[0m
+[42.823s] [ 92%] [32m[1mLinking C shared library rosidl_generator_py/md_interfaces/libmd_interfaces__python.so[0m
+[43.026s] [ 92%] Built target md_interfaces__python
+[43.077s] [35m[1mScanning dependencies of target md_interfaces__rosidl_typesupport_c__pyext[0m
+[43.078s] [35m[1mScanning dependencies of target md_interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[43.079s] [35m[1mScanning dependencies of target md_interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[43.201s] [ 93%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/md_interfaces/_md_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[43.216s] [ 96%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/md_interfaces/_md_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[43.217s] [ 96%] [32mBuilding C object CMakeFiles/md_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/md_interfaces/_md_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[43.726s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/md_interfaces/md_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[43.754s] [ 98%] [32m[1mLinking CXX shared library rosidl_generator_py/md_interfaces/md_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so[0m
+[43.767s] [100%] [32m[1mLinking C shared library rosidl_generator_py/md_interfaces/md_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[43.912s] [100%] Built target md_interfaces__rosidl_typesupport_c__pyext
+[43.984s] [100%] Built target md_interfaces__rosidl_typesupport_introspection_c__pyext
+[44.062s] [100%] Built target md_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[44.124s] Invoked command in '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces -- -j4 -l4
+[44.188s] Invoking command in '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces
+[44.227s] -- Install configuration: ""
+[44.227s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/ament_index/resource_index/rosidl_interfaces/md_interfaces
+[44.228s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces
+[44.229s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg
+[44.229s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail
+[44.230s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__struct.h
+[44.230s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__struct.h
+[44.231s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__functions.h
+[44.232s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__struct.h
+[44.232s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__functions.c
+[44.234s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__struct.h
+[44.234s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__functions.c
+[44.234s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__functions.h
+[44.235s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__struct.h
+[44.236s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__functions.c
+[44.236s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__functions.c
+[44.237s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.h
+[44.239s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__functions.c
+[44.239s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__functions.h
+[44.240s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__functions.h
+[44.241s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__functions.h
+[44.241s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__functions.h
+[44.242s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__type_support.h
+[44.242s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__type_support.h
+[44.243s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__type_support.h
+[44.243s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__functions.c
+[44.244s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.h
+[44.245s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__functions.h
+[44.245s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__functions.c
+[44.246s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__type_support.h
+[44.248s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__type_support.h
+[44.248s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__struct.h
+[44.249s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__struct.h
+[44.250s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/pos_vel_timestamped.h
+[44.250s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_motor_ticks_and_velo.h
+[44.251s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_msg2.h
+[44.251s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/rosidl_generator_c__visibility_control.h
+[44.252s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_msg1.h
+[44.252s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_user_param.h
+[44.253s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/pose.h
+[44.254s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_slow_start_stop.h
+[44.255s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/library_path.sh
+[44.256s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/library_path.dsv
+[44.257s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_generator_c.so
+[44.262s] -- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_generator_c.so" to ""
+[44.263s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces
+[44.263s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg
+[44.264s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail
+[44.265s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__rosidl_typesupport_fastrtps_c.h
+[44.265s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__rosidl_typesupport_fastrtps_c.h
+[44.265s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__rosidl_typesupport_fastrtps_c.h
+[44.266s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__rosidl_typesupport_fastrtps_c.h
+[44.266s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__rosidl_typesupport_fastrtps_c.h
+[44.267s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__rosidl_typesupport_fastrtps_c.h
+[44.267s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__rosidl_typesupport_fastrtps_c.h
+[44.268s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[44.269s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_fastrtps_c.so
+[44.273s] -- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[44.274s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces
+[44.275s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg
+[44.275s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail
+[44.276s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__rosidl_typesupport_fastrtps_cpp.hpp
+[44.276s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__rosidl_typesupport_fastrtps_cpp.hpp
+[44.276s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__rosidl_typesupport_fastrtps_cpp.hpp
+[44.277s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__rosidl_typesupport_fastrtps_cpp.hpp
+[44.278s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__rosidl_typesupport_fastrtps_cpp.hpp
+[44.278s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__rosidl_typesupport_fastrtps_cpp.hpp
+[44.279s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/dds_fastrtps
+[44.279s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__rosidl_typesupport_fastrtps_cpp.hpp
+[44.280s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[44.280s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[44.284s] -- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[44.285s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces
+[44.285s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg
+[44.286s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail
+[44.286s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__rosidl_typesupport_introspection_c.h
+[44.286s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__type_support.c
+[44.287s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__type_support.c
+[44.287s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.c
+[44.288s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__type_support.c
+[44.288s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.c
+[44.289s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__rosidl_typesupport_introspection_c.h
+[44.290s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__rosidl_typesupport_introspection_c.h
+[44.290s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__rosidl_typesupport_introspection_c.h
+[44.291s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__rosidl_typesupport_introspection_c.h
+[44.292s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__rosidl_typesupport_introspection_c.h
+[44.292s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__type_support.c
+[44.293s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__rosidl_typesupport_introspection_c.h
+[44.294s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__type_support.c
+[44.295s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[44.296s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_introspection_c.so
+[44.300s] -- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[44.300s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_c.so
+[44.302s] -- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_c.so" to ""
+[44.303s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces
+[44.303s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg
+[44.303s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail
+[44.304s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__struct.hpp
+[44.304s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__builder.hpp
+[44.305s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__struct.hpp
+[44.305s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__traits.hpp
+[44.305s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__builder.hpp
+[44.306s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__traits.hpp
+[44.307s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__struct.hpp
+[44.307s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__builder.hpp
+[44.308s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__traits.hpp
+[44.309s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__struct.hpp
+[44.309s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__type_support.hpp
+[44.310s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.hpp
+[44.311s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__traits.hpp
+[44.311s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__type_support.hpp
+[44.312s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__traits.hpp
+[44.312s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__struct.hpp
+[44.313s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__builder.hpp
+[44.314s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__builder.hpp
+[44.314s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__builder.hpp
+[44.315s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__struct.hpp
+[44.316s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__type_support.hpp
+[44.316s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__traits.hpp
+[44.317s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__builder.hpp
+[44.318s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__type_support.hpp
+[44.318s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__traits.hpp
+[44.319s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__type_support.hpp
+[44.319s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.hpp
+[44.320s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__struct.hpp
+[44.320s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_msg1.hpp
+[44.321s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_user_param.hpp
+[44.322s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_motor_ticks_and_velo.hpp
+[44.324s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/pose.hpp
+[44.324s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_slow_start_stop.hpp
+[44.325s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/md_robot_msg2.hpp
+[44.325s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/pos_vel_timestamped.hpp
+[44.325s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[44.326s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces
+[44.326s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg
+[44.327s] -- Up-to-date: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail
+[44.327s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__rosidl_typesupport_introspection_cpp.hpp
+[44.327s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__type_support.cpp
+[44.328s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__rosidl_typesupport_introspection_cpp.hpp
+[44.328s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pose__type_support.cpp
+[44.329s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__type_support.cpp
+[44.330s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__type_support.cpp
+[44.330s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_user_param__type_support.cpp
+[44.331s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__rosidl_typesupport_introspection_cpp.hpp
+[44.332s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__rosidl_typesupport_introspection_cpp.hpp
+[44.332s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/pos_vel_timestamped__rosidl_typesupport_introspection_cpp.hpp
+[44.334s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_motor_ticks_and_velo__type_support.cpp
+[44.334s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg1__type_support.cpp
+[44.335s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_slow_start_stop__rosidl_typesupport_introspection_cpp.hpp
+[44.335s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/include/md_interfaces/msg/detail/md_robot_msg2__rosidl_typesupport_introspection_cpp.hpp
+[44.336s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_introspection_cpp.so
+[44.340s] -- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[44.340s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_cpp.so
+[44.343s] -- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__rosidl_typesupport_cpp.so" to ""
+[44.343s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/pythonpath.sh
+[44.344s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/pythonpath.dsv
+[44.345s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/__init__.py
+[44.465s] Compiling '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/__init__.py'...
+[44.480s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg
+[44.481s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_user_param_s.c
+[44.481s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_pos_vel_timestamped_s.c
+[44.482s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_msg2_s.c
+[44.483s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_msg1.py
+[44.484s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_msg2.py
+[44.485s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_msg1_s.c
+[44.485s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/__init__.py
+[44.486s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_pos_vel_timestamped.py
+[44.487s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_motor_ticks_and_velo.py
+[44.488s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_pose_s.c
+[44.489s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_slow_start_stop_s.c
+[44.489s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_slow_start_stop.py
+[44.490s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_motor_ticks_and_velo_s.c
+[44.491s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_pose.py
+[44.492s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/msg/_md_robot_user_param.py
+[44.493s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/md_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[44.496s] -- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/md_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so" to ""
+[44.497s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/md_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[44.500s] -- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/md_interfaces_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so" to ""
+[44.501s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/md_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[44.504s] -- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/python3.8/site-packages/md_interfaces/md_interfaces_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so" to ""
+[44.506s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__python.so
+[44.509s] -- Set runtime path of "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/lib/libmd_interfaces__python.so" to ""
+[44.509s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/Pose.idl
+[44.510s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotMsg1.idl
+[44.510s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotMsg2.idl
+[44.511s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/PosVelTimestamped.idl
+[44.512s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotSlowStartStop.idl
+[44.513s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotUserParam.idl
+[44.514s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdMotorTicksAndVelo.idl
+[44.515s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/Pose.msg
+[44.516s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotMsg1.msg
+[44.517s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotMsg2.msg
+[44.517s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/PosVelTimestamped.msg
+[44.518s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotSlowStartStop.msg
+[44.519s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdRobotUserParam.msg
+[44.520s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/msg/MdMotorTicksAndVelo.msg
+[44.521s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/ament_index/resource_index/package_run_dependencies/md_interfaces
+[44.522s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/ament_index/resource_index/parent_prefix_path/md_interfaces
+[44.525s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/ament_prefix_path.sh
+[44.526s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/ament_prefix_path.dsv
+[44.527s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/path.sh
+[44.528s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/environment/path.dsv
+[44.529s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/local_setup.bash
+[44.529s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/local_setup.sh
+[44.530s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/local_setup.zsh
+[44.531s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/local_setup.dsv
+[44.532s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/package.dsv
+[44.534s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/ament_index/resource_index/packages/md_interfaces
+[44.535s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_generator_cExport.cmake
+[44.536s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_generator_cExport-noconfig.cmake
+[44.537s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[44.538s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[44.539s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_cExport.cmake
+[44.540s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[44.541s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_generator_cppExport.cmake
+[44.542s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[44.543s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[44.544s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_cppExport.cmake
+[44.545s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[44.546s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/rosidl_cmake-extras.cmake
+[44.547s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[44.548s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[44.549s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[44.550s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[44.551s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[44.552s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[44.552s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfacesConfig.cmake
+[44.553s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/cmake/md_interfacesConfig-version.cmake
+[44.554s] -- Installing: /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/install/md_interfaces/share/md_interfaces/package.xml
+[44.574s] Invoked command in '/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/dentium/Desktop/work/Projects/TFRobot/md_interfaces/build/md_interfaces

@@ -1,0 +1,12 @@
+{
+  "package_name": "md_interfaces",
+  "non_idl_tuples": [
+    "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces:msg/Pose.msg",
+    "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces:msg/MdRobotMsg1.msg",
+    "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces:msg/MdRobotMsg2.msg",
+    "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces:msg/PosVelTimestamped.msg",
+    "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces:msg/MdRobotSlowStartStop.msg",
+    "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces:msg/MdRobotUserParam.msg",
+    "/home/dentium/Desktop/work/Projects/TFRobot/md_interfaces:msg/MdMotorTicksAndVelo.msg"
+  ]
+}

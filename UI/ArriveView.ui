@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ArriveView</class>
+ <widget class="QWidget" name="ArriveView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dentium</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #141414;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="status_bar_placeholder" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>0</width>
+       <height>60</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>60</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="content_widget" native="true">
+     <property name="styleSheet">
+      <string notr="true">background-color: white;</string>
+     </property>
+     <widget class="QPushButton" name="fix_location_button">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>390</y>
+        <width>221</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans KR Black</family>
+        <pointsize>-1</pointsize>
+        <weight>62</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 2px solid #444444;
+	padding-left: 16px;
+    font-family: &quot;Noto Sans KR Black&quot;;
+}
+
+QPushButton:hover {
+    background-color: #333333;
+    border: 2px solid #666666;
+}
+
+QPushButton:pressed {
+    background-color: #2a2a2a;
+}</string>
+      </property>
+      <property name="text">
+       <string>위치 고정</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="waiting_location_button">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>390</y>
+        <width>221</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans KR Black</family>
+        <pointsize>-1</pointsize>
+        <weight>62</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 2px solid #444444;
+    font-family: &quot;Noto Sans KR Black&quot;;
+}
+
+QPushButton:hover {
+    background-color: #333333;
+    border: 2px solid #666666;
+}
+
+QPushButton:pressed {
+    background-color: #2a2a2a;
+}</string>
+      </property>
+      <property name="text">
+       <string>대기 장소</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="goal_name_label">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>-30</y>
+        <width>441</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans KR Black</family>
+        <pointsize>-1</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    color: black;
+    font-size: 50px;
+    font-weight: 600;
+    font-family: &quot;Noto Sans KR Black&quot;;
+    background-color: transparent;
+}</string>
+      </property>
+      <property name="text">
+       <string>goal_name</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="locate_select_button">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>390</y>
+        <width>221</width>
+        <height>70</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Noto Sans KR Black</family>
+        <pointsize>-1</pointsize>
+        <weight>62</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+    background-color: #00A3FF;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    font-family: &quot;Noto Sans KR Black&quot;;
+}
+
+QPushButton:hover {
+    background-color: #33B5FF;
+}
+
+QPushButton:pressed {
+    background-color: #0080DD;
+}</string>
+      </property>
+      <property name="text">
+       <string>목적지 선택 화면</string>
+      </property>
+     </widget>
+     <widget class="QFrame" name="info_card_2">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>250</y>
+        <width>300</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QFrame {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    border: 1px solid #333333;
+}</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="travel_time_title_label">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>15</y>
+         <width>141</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #999999;
+    font-size: 14px;
+    font-family: &quot;Noto Sans KR Black&quot;;
+    background-color: transparent;
+    border: none;
+}</string>
+       </property>
+       <property name="text">
+        <string>이동 소요 시간</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="travel_time_label">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>261</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Noto Sans KR Black</family>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QLabel {
+    color: #00A3FF;
+    font-size: 32px;
+    font-weight: 600;
+    font-family: &quot;Noto Sans KR Black&quot;;
+    background-color: transparent;
+    border: none;
+}</string>
+       </property>
+       <property name="text">
+        <string>12 Km</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>100</y>
+        <width>101</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-image: url(:/file/Arrive/robot_100.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>190</y>
+        <width>341</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-image: url(:/file/Arrive/longline.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>90</y>
+        <width>101</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLabel {
+    background-image: url(:/file/Arrive/marker_100.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../resources/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

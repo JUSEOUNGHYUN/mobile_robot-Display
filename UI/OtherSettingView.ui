@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsView</class>
+ <widget class="QWidget" name="SettingsView">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>615</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dentium</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #FFFFFF</string>
+  </property>
+  <widget class="QWidget" name="status_bar_placeholder" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>60</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QLabel" name="title_label_6">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>141</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Noto Sans KR Black</family>
+     <pointsize>-1</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: &quot;Noto Sans KR Black&quot;;
+    background-color: transparent;
+}</string>
+   </property>
+   <property name="text">
+    <string>Area Setting</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="area_index_view_cb">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>100</y>
+     <width>231</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Noto Sans KR Black</family>
+     <pointsize>-1</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QCheckBox {
+    spacing: 12px;                   /* 텍스트와 체크박스 간 간격 */
+	font-family: 'Noto Sans KR Black';
+    font-size: 20px;                 /* 글씨 크기 */
+    font-weight: bold;              /* 글씨 굵기 (헤더 느낌) */
+    color: #1A1A1A;                 /* 진한 텍스트 색 */
+    padding: 10px 4px;              /* 여백 추가 (시각적으로 더 큼직하게) */
+}
+
+QCheckBox::indicator {
+    width: 32px;                    /* 체크 아이콘 가로 크기 */
+    height: 32px;                   /* 체크 아이콘 세로 크기 */
+}
+
+/* 체크 해제 상태 */
+QCheckBox::indicator:unchecked {
+    image: url(:/file/CheckBox/uncheck.png);
+}
+
+/* 체크된 상태 */
+QCheckBox::indicator:checked {
+    image: url(:/file/CheckBox/checked.png);
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Show Index Label</string>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="save_value_button">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>540</y>
+     <width>200</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>200</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>200</width>
+     <height>60</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Noto Sans KR Black</family>
+     <pointsize>-1</pointsize>
+     <weight>62</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #1e1e1e;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 10px;
+    border: 2px solid #444444;
+    font-family: &quot;Noto Sans KR Black&quot;;
+}
+
+QPushButton:hover {
+    background-color: #333333;
+    border: 2px solid #666666;
+}
+
+QPushButton:pressed {
+    background-color: #2a2a2a;
+}</string>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../resources/res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
